@@ -1,3 +1,8 @@
+body, html {
+  font-family: Tahoma;
+  overflow: hidden;
+}
+
 #splashScreen img{
   margin:0 auto;
   position: absolute;
@@ -15,4 +20,138 @@
   background-color:#f5f5f4;
   background-repeat:no-repeat;
   text-align:center;
+}
+
+#slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#slide-container {
+  height: 100%;
+  width: 200%;
+}
+
+.slide {
+  background-attachment: fixed;
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.wrapper {
+  min-height: 744px;
+  min-width: 1024px;
+  height: 100%;
+  margin:0 auto;
+  position:relative;
+
+  * {
+    -webkit-transition: all .15s linear .2s ease-out 0;
+    -moz-transition: all .15s linear .2s ease-out 0s;
+    -o-transition: all .15s linear .2s ease-out 0;
+    transition: all .15s linear .2s ease-out 0;
+    -webkit-transition: all .15s linear;
+    -moz-transition: all .15s linear;
+    -o-transition: all .15s linear;
+    transition: all .15s linear
+  }
+}
+.slideno {
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  font-size:100px;
+  font-weight:bold;
+  color:rgba(255,255,255,0.3);
+}
+
+.button{
+  display:block;
+  width:61px;
+  height:75px;
+  position:absolute;
+  bottom:0px;
+  background-image:url(../img/arrow.png);
+  background-repeat:no-repeat;
+}
+.button:hover{
+  cursor:pointer;
+}
+
+/******************************
+ SLIDE AGNECY
+*******************************/
+#slide_agency{
+  background-color:#fff;
+
+  .link_block {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: #73157c;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      background: #b4b6b7;
+    }
+  }
+
+  .button {
+    top: 85px;
+    left: 0;
+  }
+
+}
+
+#slide_mission {
+
+  .button {
+    top: 85px;
+    left: 0;
+  }
+
+  .wrapper {
+    background-color: #73157c;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+
+    margin: 12px;
+
+    .content {
+      padding: 70px 95px;
+      color: #fff;
+      width: 60%;
+
+      h1 {
+        font-size: 100px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        margin-bottom: 55px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 54.17px;
+      }
+    }
+  }
+
 }
