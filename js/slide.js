@@ -4,9 +4,8 @@ jQuery(function () {
   $(window).stellar({
     horizontalScrolling: true,
     verticalScrolling: true,
-    horizontalOffset: 0,
-    verticalOffset: 0,
-    positionProperty: 'position'
+    parallaxBackgrounds: true,
+    parallaxElements: true
   });
   links = $('.link_block');
   slide = $('.slide');
