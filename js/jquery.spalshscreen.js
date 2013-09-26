@@ -76,8 +76,6 @@
             }
         });
 
-
-
         splashScreen.trigger('changeText',0);
 
         // Extracting the functionality into a
