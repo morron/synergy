@@ -8,7 +8,7 @@ jQuery(function () {
     verticalOffset: 0,
     positionProperty: 'position'
   });
-  links = $('.link_block');
+  links = $('.slide-link');
   slide = $('.slide');
   button = $('.button');
   mywindow = $(window);

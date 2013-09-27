@@ -11,7 +11,7 @@ jQuery ->
     positionProperty: 'position'
 
   # Кэш некоторых переменных
-  links = $('.link_block')
+  links = $('.slide-link')
   slide = $('.slide')
   button = $('.button')
   mywindow = $(window)
