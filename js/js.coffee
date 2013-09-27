@@ -1,4 +1,3 @@
-###
 jQuery ->
   $('#splashImg').splashScreen
     textLayers: [
@@ -7,4 +6,4 @@ jQuery ->
       'img/splash-2.png'
       'img/splash-3.png'
       'img/splash-4.png'
-    ]###
+    ]
