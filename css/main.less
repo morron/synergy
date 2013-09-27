@@ -1,3 +1,5 @@
+@grey-hover: #b4b6b7;
+
 body, html {
   font-family: Tahoma;
   overflow: hidden;
@@ -127,7 +129,7 @@ body, html {
     }
 
     &:hover {
-      background: #b4b6b7;
+      background: @grey-hover;
     }
   }
 
@@ -136,6 +138,54 @@ body, html {
     left: 0;
   }
 
+}
+
+#slide_services {
+  background-color: #ffffff;
+
+  .wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+
+    margin: 12px;
+  }
+
+  .slide-link {
+    background-color: #ec6500;
+    display: block;
+    font-size: 75px;
+    color: #fff;
+    text-align: center;;
+    text-decoration: none;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    line-height: 2.5em;
+    height: 25%;
+    position: absolute;
+    width: 100%;
+
+    &:hover {
+      background-color: @grey-hover;
+    }
+  }
+
+  .button {
+    right: 85px;
+    top: -12px;
+    left: auto;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
 }
 
 #slide_mission {
