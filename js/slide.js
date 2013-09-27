@@ -27,20 +27,27 @@ jQuery(function () {
       return $('.navigation li[data-slide="2"]').removeClass('active');
     }
   });
-  goToByScroll = function (dataslide) {
-    return htmlbody.animate({ scrollLeft: $('.slide[data-slide="' + dataslide + '"]').offset().left }, 2e3, 'easeInOutQuint');
+  goToByScroll = function (dataslide, orientation) {
+    console.log(orientation);
+    if (orientation === 'vertical') {
+      return htmlbody.animate({ scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top }, 2e3, 'easeInOutQuint');
+    } else if (orientation === 'horizontal') {
+      return htmlbody.animate({ scrollLeft: $('.slide[data-slide="' + dataslide + '"]').offset().left }, 2e3, 'easeInOutQuint');
+    }
   };
   links.click(function (e) {
-    var dataslide;
+    var dataslide, orientation;
     e.preventDefault();
     dataslide = $(this).attr('data-slide');
-    goToByScroll(dataslide);
+    orientation = $(this).attr('data-orientation') || 'horizontal';
+    goToByScroll(dataslide, orientation);
     return false;
   });
   return button.click(function (e) {
-    var dataslide;
+    var dataslide, orientation;
     e.preventDefault();
     dataslide = $(this).attr('data-slide');
-    return goToByScroll(dataslide);
+    orientation = $(this).attr('data-orientation') || 'horizontal';
+    return goToByScroll(dataslide, orientation);
   });
 });

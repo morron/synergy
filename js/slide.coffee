@@ -37,20 +37,28 @@ jQuery ->
 
 
   # Анимация перехода между слайдами
-  goToByScroll = (dataslide) ->
-    htmlbody.animate({
-      scrollLeft: $('.slide[data-slide="' + dataslide + '"]').offset().left
-    }, 2000, 'easeInOutQuint')
+  goToByScroll = (dataslide, orientation) ->
+    console.log orientation
+    if orientation == 'vertical'
+      htmlbody.animate({
+        scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
+      }, 2000, 'easeInOutQuint')
+    else if orientation == 'horizontal'
+      htmlbody.animate({
+        scrollLeft: $('.slide[data-slide="' + dataslide + '"]').offset().left
+      }, 2000, 'easeInOutQuint')
 
   # Когда пользователь нажимает на ссылку в навигации, получаем значение параметра data-slide слайда и передаем его функции goToByScroll
   links.click (e) ->
     e.preventDefault()
     dataslide = $(this).attr('data-slide')
-    goToByScroll(dataslide)
+    orientation = $(this).attr('data-orientation') || 'horizontal'
+    goToByScroll(dataslide, orientation)
     return false
 
   # Когда пользователь нажимает на кнопку перехода, получаем значение параметра data-slide кнопки и передаем его функции goToByScroll
   button.click (e) ->
     e.preventDefault()
     dataslide = $(this).attr('data-slide')
-    goToByScroll(dataslide)
+    orientation = $(this).attr('data-orientation') || 'horizontal'
+    goToByScroll(dataslide, orientation)
