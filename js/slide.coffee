@@ -5,10 +5,8 @@ jQuery ->
     horizontalScrolling: true
     verticalScrolling: true
 
-    # Set the global alignment offsets
-    horizontalOffset: 0
-    verticalOffset: 0
-    positionProperty: 'position'
+    parallaxBackgrounds: true
+    parallaxElements: true
 
   # Кэш некоторых переменных
   links = $('.slide-link')

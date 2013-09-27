@@ -32,18 +32,19 @@ body, html {
 
 #slide-container {
   height: 100%;
-  width: 200%;
+  width: 400%;
 }
 
 .slide {
   background-attachment: fixed;
-  width: 50%;
+  width: 25%;
   height: 100%;
   float: left;
   position: relative;
 }
 
 .wrapper {
+  background-attachment: fixed;
   min-height: 744px;
   min-width: 1024px;
   height: 100%;
@@ -75,7 +76,8 @@ body, html {
   width:61px;
   height:75px;
   position:absolute;
-  bottom:0px;
+  top: 85px;
+  left: 0;
   background-image:url(../img/arrow.png);
   background-repeat:no-repeat;
 }
@@ -154,4 +156,27 @@ body, html {
     }
   }
 
+}
+
+#slide_worth {
+
+  .wrapper {
+    background: url(../img/clock-shadow.png) no-repeat center #666666;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    margin: 12px;
+    text-align: center;
+
+    img {
+      position: absolute;
+      left: 36%;
+      top: 18%;
+    }
+  }
 }
