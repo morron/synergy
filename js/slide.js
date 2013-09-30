@@ -5,7 +5,10 @@ jQuery(function () {
     horizontalScrolling: true,
     verticalScrolling: true,
     parallaxBackgrounds: true,
-    parallaxElements: true
+    parallaxElements: true,
+    verticalOffset: 0,
+    horizontalOffset: 0,
+    hideDistantElements: true
   });
   links = $('.slide-link');
   slide = $('.slide');

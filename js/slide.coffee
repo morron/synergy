@@ -1,4 +1,5 @@
 jQuery ->
+
   # инициализация Stellar.js
   $(window).stellar
     # Set scrolling to be in either one or both directions
@@ -7,6 +8,11 @@ jQuery ->
 
     parallaxBackgrounds: true
     parallaxElements: true
+
+    verticalOffset: 0
+    horizontalOffset: 0
+
+    hideDistantElements: true
 
   # Кэш некоторых переменных
   links = $('.slide-link')
