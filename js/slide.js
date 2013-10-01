@@ -31,7 +31,6 @@ jQuery(function () {
     }
   });
   goToByScroll = function (dataslide, orientation) {
-    console.log(orientation);
     if (orientation === 'vertical') {
       return htmlbody.animate({ scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top }, 2e3, 'easeInOutQuint');
     } else if (orientation === 'horizontal') {

@@ -1,6 +1,13 @@
+@font-face {
+  font-family: 'dincondensedcregular';
+  src: url('fonts/dincondensedc-webfont.eot');
+  src: url('fonts/dincondensedc-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/dincondensedc-webfont.woff') format('woff'), url('fonts/dincondensedc-webfont.ttf') format('truetype'), url('fonts/dincondensedc-webfont.svg#dincondensedcregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body,
 html {
-  font-family: Tahoma;
+  font-family: 'dincondensedcregular', Tahoma;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -33,6 +40,7 @@ html {
 #slide-container {
   height: 100%;
   width: 400%;
+  background-color: #b4b6b7;
 }
 /* outer container will define aspect ratio */
 .slide {
@@ -80,10 +88,27 @@ html {
   cursor: pointer;
 }
 /******************************
+ SLIDE INDEX
+*******************************/
+#slide_index {
+  background-color: #b4b6b7;
+}
+#slide_index .wrapper {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  padding: 12px;
+}
+/******************************
  SLIDE AGNECY
 *******************************/
 #slide_agency {
-  background-color: #fff;
+  background-color: #b4b6b7;
 }
 #slide_agency .link_block {
   display: block;
@@ -99,6 +124,7 @@ html {
 #slide_agency .link_block span {
   display: inline-block;
   vertical-align: middle;
+  line-height: 1.2;
 }
 #slide_agency .link_block:hover {
   background: #b4b6b7;
@@ -107,6 +133,9 @@ html {
   top: 85px;
   left: 0;
 }
+/******************************
+ SLIDE SERVICES
+*******************************/
 #slide_services {
   background-color: #b4b6b7;
 }
@@ -154,7 +183,7 @@ html {
 }
 #slide_mission .button {
   top: 85px;
-  left: 0;
+  left: 0px;
 }
 #slide_mission .wrapper {
   background-color: #ffffff;
@@ -177,14 +206,13 @@ html {
   padding: 5% 95px;
 }
 #slide_mission .wrapper .content h1 {
-  font-size: 100px;
   text-decoration: underline;
   text-transform: uppercase;
   margin-bottom: 55px;
   font-weight: bold;
 }
 #slide_worth .wrapper {
-  background: url(../img/clock-shadow.png) no-repeat center #666666;
+  background-color: #fff;
   position: absolute;
   left: 0;
   top: 0;
@@ -192,13 +220,20 @@ html {
   bottom: 0;
   width: auto;
   height: auto;
-  margin: 12px;
+  padding: 12px;
   text-align: center;
+}
+#slide_worth .wrapper .content {
+  background: url(../img/clock-shadow.png) no-repeat center #eeeeee;
+  width: 100%;
+  height: 100%;
 }
 #slide_worth .wrapper img {
   position: absolute;
-  left: 36%;
-  top: 18%;
+  left: 50%;
+  top: 50%;
+  margin-top: -231px;
+  margin-left: -212px;
 }
 @media all {
   .slide article {
@@ -210,6 +245,12 @@ html {
     left: 50%;
   }
 }
+@media (min-height: 960px) {
+  .slide article {
+    width: 1280px;
+    height: 960px;
+  }
+}
 @media (min-height: 768px) and (max-height: 960px) {
   .slide article {
     width: 1024px;
@@ -218,14 +259,11 @@ html {
     margin-left: -512px;
     margin-top: -384px;
   }
+  #slide_agency .link_block {
+    line-height: 700px;
+  }
   p {
     font-size: 0.5em;
-  }
-}
-@media (min-height: 960px) {
-  .slide article {
-    width: 1280px;
-    height: 960px;
   }
 }
 @media (min-height: 600px) and (max-height: 768px) {
@@ -235,5 +273,14 @@ html {
     font-size: 62.5px;
     margin-left: -400px;
     margin-top: -300px;
+  }
+  #slide_agency .link_block {
+    line-height: 500px;
+  }
+  h1 {
+    font-size: 1.3em;
+  }
+  p {
+    font-size: 0.5em;
   }
 }

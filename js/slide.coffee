@@ -44,7 +44,6 @@ jQuery ->
 
   # Анимация перехода между слайдами
   goToByScroll = (dataslide, orientation) ->
-    console.log orientation
     if orientation == 'vertical'
       htmlbody.animate({
         scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
