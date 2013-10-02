@@ -136,6 +136,7 @@ h1 {
   font-size: 100px;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
 }
 #slide_agency .link_block span {
   display: inline-block;
