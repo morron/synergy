@@ -12,6 +12,7 @@ html {
   width: 100%;
   height: 100%;
   font-size: 100px;
+  text-transform: uppercase;
 }
 h1 {
   color: #fff;
@@ -170,7 +171,7 @@ h1 {
 #slide_services .slide-link {
   background-color: #ec6500;
   display: block;
-  font-size: 0.7em;
+  font-size: 0.9em;
   color: #fff;
   text-align: center;
   text-decoration: none;
