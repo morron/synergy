@@ -274,7 +274,12 @@ h1 {
   color: #f6f6f6;
   line-height: 0.8em;
 }
-#slide_budda .wrapper img {
+#slide_budda .wrapper .content p {
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;
+}
+#slide_budda .wrapper img.buda {
   position: absolute;
   left: 50%;
   bottom: 0;
@@ -311,6 +316,60 @@ h1 {
   }
   #slide_agency .link_block {
     line-height: 700px;
+  }
+  #slide_budda p {
+    font-size: 0.26em;
+  }
+  #slide_budda p.l-1 {
+    top: 250px;
+    left: 180px;
+  }
+  #slide_budda p.l-2 {
+    top: 400px;
+    left: 100px;
+  }
+  #slide_budda p.l-3 {
+    top: 600px;
+    left: 140px;
+  }
+  #slide_budda p.r-1 {
+    top: 250px;
+    right: 185px;
+  }
+  #slide_budda p.r-2 {
+    top: 385px;
+    right: 90px;
+  }
+  #slide_budda p.r-3 {
+    top: 595px;
+    right: 120px;
+  }
+  #slide_budda img.p-line {
+    position: absolute;
+  }
+  #slide_budda img.p-line.l-1 {
+    top: 255px;
+    left: 275px;
+  }
+  #slide_budda img.p-line.l-2 {
+    top: 414px;
+    left: 205px;
+  }
+  #slide_budda img.p-line.l-3 {
+    top: 540px;
+    left: 245px;
+  }
+  #slide_budda img.p-line.r-1 {
+    top: 255px;
+    right: 295px;
+  }
+  #slide_budda img.p-line.r-2 {
+    top: 414px;
+    right: 225px;
+  }
+  #slide_budda img.p-line.r-3 {
+    top: 545px;
+    right: 250px;
   }
   p {
     font-size: 0.5em;
