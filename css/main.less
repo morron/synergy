@@ -155,7 +155,7 @@ h1 {
 }
 
 /******************************
- SLIDE AGNECY
+ SLIDE AGENCY
 *******************************/
 #slide_agency{
   background-color: @grey-hover;
@@ -212,7 +212,7 @@ h1 {
   .slide-link {
     background-color: #ec6500;
     display: block;
-    font-size: 0.7em;
+    font-size: 0.9em;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -494,7 +494,7 @@ h1 {
 }
 
 
-@media (min-height: 600px) and (max-height: 768px) {
+@media (max-height: 768px) {
 
   .slide article {
     height: 600px;
@@ -512,12 +512,84 @@ h1 {
   #slide_budda {
     .wrapper {
 
-      img {
+      img.buda {
         width: 80%;
         margin-left: -320px;
       }
     }
   }
+
+  #slide_budda {
+    p {
+      font-size: 0.26em;
+
+      &.l-1 {
+        top: 250px;
+        left: 180px;
+
+      }
+
+      &.l-2 {
+        top: 400px;
+        left: 100px;
+      }
+
+      &.l-3 {
+        top: 600px;
+        left: 140px;
+      }
+
+      &.r-1 {
+        top: 250px;
+        right: 185px;
+      }
+
+      &.r-2 {
+        top: 385px;
+        right: 90px;
+      }
+
+      &.r-3 {
+        top: 595px;
+        right: 120px;
+      }
+    }
+    img.p-line {
+      width: 10%;
+      position: absolute;
+      &.l-1 {
+        top: 255px;
+        left: 275px;
+      }
+
+      &.l-2 {
+        top: 414px;
+        left: 205px;
+      }
+
+      &.l-3 {
+        top: 540px;
+        left: 245px;
+      }
+
+      &.r-1 {
+        top: 255px;
+        right: 295px;
+      }
+
+      &.r-2 {
+        top: 414px;
+        right: 225px;
+      }
+
+      &.r-3 {
+        top: 545px;
+        right: 250px;
+      }
+
+    }
+  }
+
   h1 {
     font-size: 1.3em;
   }
