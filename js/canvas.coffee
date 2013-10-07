@@ -1,12 +1,12 @@
 OnResizeCalled = () ->
-  gameWidth = window.innerWidth
-  gameHeight = window.innerHeight
+  gameWidth = $('#canvascontainer').parent().innerWidth()
+  gameHeight = $('#canvascontainer').parent().innerHeight()
 
   scaleToFitX = gameWidth / 1000
   scaleToFitY = gameHeight / 724
 
   optimalRatio = Math.min scaleToFitX, scaleToFitY
-
+#
   stage.setScale(optimalRatio);
 #  stage.setScaleX(scaleToFitX);
 #  stage.setScaleY(scaleToFitY);
@@ -36,18 +36,19 @@ triangleRedraw = () ->
 
 window.addEventListener("resize", OnResizeCalled, false)
 
-gameWidth = window.innerWidth
-gameHeight = window.innerHeight
+gameWidth = $('#canvascontainer').parent().innerWidth()
+gameHeight = $('#canvascontainer').parent().innerHeight()
 
 scaleToFitX = gameWidth / 1000
 scaleToFitY = gameHeight / 700
-
+#
 optimalRatio = Math.min scaleToFitX, scaleToFitY
+#console.log($('#canvascontainer').parent().innerWidth());
 
 stage = new Kinetic.Stage
-  container: 'container'
-  width: window.innerWidth
-  height: window.innerHeight
+  container: 'canvascontainer'
+  width: $('#canvascontainer').parent().innerWidth()
+  height: $('#canvascontainer').parent().innerHeight()
   scale: optimalRatio
 
 layer = new Kinetic.Layer()
@@ -80,10 +81,12 @@ triangleTop = new Kinetic.Polygon
 
 triangleMouseover = () ->
   this.setFill('#7f8283')
+  document.body.style.cursor = 'pointer';
   layer.draw()
 
 triangleMouseout = () ->
   this.setFill('#b4b6b7')
+  document.body.style.cursor = 'default';
   layer.draw()
 
 triangleBottom.on('mouseover', triangleMouseover)
@@ -94,9 +97,16 @@ triangleLeft.on('mouseout', triangleMouseout)
 
 triangleRight.on('mouseover', triangleMouseover)
 triangleRight.on('mouseout', triangleMouseout)
+triangleRight.on('click', ->
+  $('.slide-link.t').click()
+)
+
 
 triangleTop.on('mouseover', triangleMouseover)
 triangleTop.on('mouseout', triangleMouseout)
+triangleTop.on('click', ->
+  $('.slide-link.f').click()
+)
 
 # add the shape to the layer
 layer.add(triangleRight)
@@ -108,3 +118,9 @@ OnResizeCalled()
 
 # add the layer to the stage
 stage.add(layer)
+
+$('.slide-link.f').on 'mouseover', ->
+  triangleTop.fire('mouseover')
+
+$('.slide-link.t').on 'mouseover', ->
+  triangleRight.fire('mouseover')

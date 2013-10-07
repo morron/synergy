@@ -14,6 +14,7 @@
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v4.7.1.min.js"></script>
+    <script type="text/javascript" src="js/slide.js"></script>
 
 </head>
 
@@ -21,15 +22,149 @@
     <div id="splashImg">
 
     </div>
+    <div id="slides">
+        <div id="slide-container">
 
-    <div class="wrap">
-        <div id="container"></div>
+            <section class="slide" id="slide_index" data-slide="index" data-stellar-background-ratio="0.5">
+                <article>
+                    <div class="wrapper">
+                        <div class="content">
+                            <div id="canvascontainer"></div>
+                            <!--<span class="tr t-down slide-block" data-slide="services" data-orientation="vertical">-->
+                                <a href="#" class="slide-link f" data-slide="services" data-orientation="vertical"><span>Услуги</span></a>
+                            <!--</span>-->
+                            <!--<span class="tr t-right slide-block" >-->
+                                <a href="#" class="slide-link t" data-slide="agency" data-orientation="horizontal"><span>Агенство</span></a>
+                            <!--</span>-->
+                            <!--<span class="tr t-left slide-block" data-slide="agency" data-orientation="horizontal">-->
+                                <!--<a href="#" class="slide-link fo"><span>Контакты</span></a>-->
+                            <!--</span>-->
+                            <!--<span class="tr t-up slide-block">-->
+                                <!--<a href="#" class="slide-link th"><span>География</span></a>-->
+                            <!--</span>-->
+                        </div>
+                    </div>
+                </article>
+            </section>
 
-        <script defer="defer">
+            <section class="slide" id="slide_agency" data-slide="agency" data-stellar-background-ratio="0.5">
+                <article>
+                    <div class="wrapper">
+                        <a href="#" class="slide-link link_block" data-slide="mission" data-orientation="horizontal"><span>Миссия</span></a>
+                        <a href="#" class="slide-link link_block" data-slide="worth" data-orientation="horizontal"><span>Ценности</span></a>
+                    </div>
+                    <a class="button" data-slide="index" data-orientation="horizontal" title=""></a>
+                </article>
+            </section>
 
+            <section class="slide" id="slide_mission" data-slide="mission" >
+                <article data-stellar-offset-parent="true">
+                    <div class="wrapper" >
+                        <div class="content">
+                            <div>
+                                <h1>Миссия</h1>
 
+                                <p>
+                                    Мы разрабатываем
+                                    и воплощаем в жизнь
+                                    яркие и эффективные
+                                    рекламные решения,
+                                    используя лучший опыт
+                                    и открывая новые
+                                    горизонты для наших клиентов,
+                                    партнеров и сотрудников.
+                                </p>
+                                </div>
+                        </div>
 
-        </script>
+                    </div>
+                    <a class="button" data-slide="agency" data-orientation="horizontal" title=""></a>
+                </article>
+            </section>
+
+            <section class="slide" id="slide_worth" data-slide="worth"  >
+                <article>
+                    <div class="wrapper">
+
+                        <div class="content">
+                            <img src="img/clock.png" alt="" data-stellar-ratio="0.9"  />
+                        </div>
+
+                    </div>
+                    <a class="button" data-slide="agency" data-orientation="horizontal" title=""></a>
+                </article>
+            </section>
+
+            <div style="clear:both;"></div>
+
+            <section class="slide" id="slide_services" data-slide="services" data-stellar-background-ratio="0.5">
+                <article>
+                    <div class="wrapper" data-stellar-background-ratio="0.5" >
+
+                        <a href="" class="slide-link slide-link-on" data-slide="budda" data-orientation="horizontal">Профессиональный маркетинг</a>
+                        <a href="" class="slide-link slide-link-tw">потребительский маркетинг</a>
+                        <a href="" class="slide-link slide-link-th">Цифровой маркетинг</a>
+                        <a href="" class="slide-link slide-link-fo">Производство и переупаковка</a>
+
+                    </div>
+                    <a  class="button" data-slide="index" data-orientation="vertical" title=""></a>
+                </article>
+            </section>
+
+            <section class="slide" id="slide_budda" data-slide="budda" data-stellar-background-ratio="0.5">
+                <article>
+                    <div class="wrapper" data-stellar-background-ratio="0.5">
+                        <div class="content">
+                            <h1>Профессиональный маркетинг</h1>
+                            <img src="img/budda.png" class="buda" alt=""/>
+                            <img src="img/p-line-l1.png" class="p-line l-1">
+                            <img src="img/p-line-l2.png" class="p-line l-2">
+                            <img src="img/p-line-l3.png" class="p-line l-3">
+                            <img src="img/p-line-r1.png" class="p-line r-1">
+                            <img src="img/p-line-r2.png" class="p-line r-2">
+                            <img src="img/p-line-r3.png" class="p-line r-3">
+                            <p class="l-1">Сэмплинг, <br>
+                                лекции, <br >
+                                демонстрации <br >
+                                в профканале <br >
+                            </p>
+                            <p class="l-2">
+                                Разработка <br >
+                                медицинских <br >
+                                брошюр <br >
+                                и журналов <br >
+                            </p>
+                            <p class="l-3">
+                                Организация <br >
+                                тренингов <br >
+                                и семинаров <br >
+                            </p>
+
+                            <p class="r-1">
+                                Участие <br >
+                                в выставках <br >
+                                и мероприятиях <br >
+                            </p>
+
+                            <p class="r-2">
+                                Программы <br >
+                                лояльности <br >
+                                для специалистов <br >
+                            </p>
+
+                            <p class="r-3">
+                                Брендинг <br >
+                                в профессиональном <br >
+                                канале <br >
+                            </p>
+                        </div>
+                    </div>
+                    <a  class="button" data-slide="services" data-orientation="horizontal" title=""></a>
+                </article>
+            </section>
+
+        </div>
+
     </div>
 
     <script type="text/javascript" src="js/canvas.js" ></script>

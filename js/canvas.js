@@ -3,8 +3,8 @@ void function () {
   var gameHeight, gameWidth, layer, OnResizeCalled, optimalRatio, scaleToFitX, scaleToFitY, stage, triangleBottom, triangleLeft, triangleMouseout, triangleMouseover, triangleRedraw, triangleRight, triangleTop;
   OnResizeCalled = function () {
     var gameHeight, gameWidth, optimalRatio, scaleToFitX, scaleToFitY;
-    gameWidth = window.innerWidth;
-    gameHeight = window.innerHeight;
+    gameWidth = $('#canvascontainer').parent().innerWidth();
+    gameHeight = $('#canvascontainer').parent().innerHeight();
     scaleToFitX = gameWidth / 1e3;
     scaleToFitY = gameHeight / 724;
     optimalRatio = Math.min(scaleToFitX, scaleToFitY);
@@ -48,15 +48,15 @@ void function () {
     return layer.draw();
   };
   window.addEventListener('resize', OnResizeCalled, false);
-  gameWidth = window.innerWidth;
-  gameHeight = window.innerHeight;
+  gameWidth = $('#canvascontainer').parent().innerWidth();
+  gameHeight = $('#canvascontainer').parent().innerHeight();
   scaleToFitX = gameWidth / 1e3;
   scaleToFitY = gameHeight / 700;
   optimalRatio = Math.min(scaleToFitX, scaleToFitY);
   stage = new Kinetic.Stage({
-    container: 'container',
-    width: window.innerWidth,
-    height: window.innerHeight,
+    container: 'canvascontainer',
+    width: $('#canvascontainer').parent().innerWidth(),
+    height: $('#canvascontainer').parent().innerHeight(),
     scale: optimalRatio
   });
   layer = new Kinetic.Layer;
@@ -114,10 +114,12 @@ void function () {
   });
   triangleMouseover = function () {
     this.setFill('#7f8283');
+    document.body.style.cursor = 'pointer';
     return layer.draw();
   };
   triangleMouseout = function () {
     this.setFill('#b4b6b7');
+    document.body.style.cursor = 'default';
     return layer.draw();
   };
   triangleBottom.on('mouseover', triangleMouseover);
@@ -126,12 +128,24 @@ void function () {
   triangleLeft.on('mouseout', triangleMouseout);
   triangleRight.on('mouseover', triangleMouseover);
   triangleRight.on('mouseout', triangleMouseout);
+  triangleRight.on('click', function () {
+    return $('.slide-link.t').click();
+  });
   triangleTop.on('mouseover', triangleMouseover);
   triangleTop.on('mouseout', triangleMouseout);
+  triangleTop.on('click', function () {
+    return $('.slide-link.f').click();
+  });
   layer.add(triangleRight);
   layer.add(triangleBottom);
   layer.add(triangleLeft);
   layer.add(triangleTop);
   OnResizeCalled();
   stage.add(layer);
+  $('.slide-link.f').on('mouseover', function () {
+    return triangleTop.fire('mouseover');
+  });
+  $('.slide-link.t').on('mouseover', function () {
+    return triangleRight.fire('mouseover');
+  });
 }.call(this);

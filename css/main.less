@@ -1,7 +1,33 @@
-html, body {
-  height: 100%;
-  min-height: 100%;
+@import 'less-triangle';
+
+@grey-hover: #b4b6b7;
+@size: 100px;
+
+
+@font-face {
+  font-family: 'dincondensedcregular';
+  src: url('fonts/dincondensedc-webfont.eot');
+  src: url('fonts/dincondensedc-webfont.eot?#iefix') format('embedded-opentype'),
+  url('fonts/dincondensedc-webfont.woff') format('woff'),
+  url('fonts/dincondensedc-webfont.ttf') format('truetype'),
+  url('fonts/dincondensedc-webfont.svg#dincondensedcregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body, html {
+  font-family: 'dincondensedcregular', Tahoma;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-size: @size;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
 }
 
 #splashScreen img{
@@ -32,6 +58,60 @@ html, body {
   margin: 12px;
   min-height: 700px;
 //  padding: 12px;
+  z-index: 1000;
+}
+
+#slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#slide-container {
+  height: 100%;
+  width: 400%;
+  background-color: @grey-hover;
+}
+
+/* outer container will define aspect ratio */
+//.outer {
+//  position: relative;
+//  width: 100%;
+//}
+//
+//.outer.r4x3 {
+//  padding-top: 75%; /* "height" will be 3/4 of width */
+//}
+//
+//.outer .inner {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//  outline: 1px solid grey;
+//}
+
+.slide {
+  background-color: @grey-hover;
+  background-attachment: fixed;
+  width: 25%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.wrapper {
+  background-attachment: fixed;
+  height: 100%;
+  margin:0 auto;
+  position:relative;
+
+  .content {
+
+  }
 
   * {
     -webkit-transition: all .15s linear .2s ease-out 0;
@@ -47,4 +127,633 @@ html, body {
   #container {
     text-align: center;
   }
+
+}
+.slideno {
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  font-size:100px;
+  font-weight:bold;
+  color:rgba(255,255,255,0.3);
+}
+
+.button{
+  display:block;
+  width:61px;
+  height:75px;
+  position:absolute;
+  top: 85px;
+  left: 0;
+  background-image:url(../img/arrow.png);
+  background-repeat:no-repeat;
+}
+.button:hover{
+  cursor:pointer;
+}
+
+/******************************
+ SLIDE INDEX
+*******************************/
+
+#slide_index {
+  background-color: @grey-hover;
+
+  .wrapper {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+
+    padding: 12px;
+
+    .content {
+      background-color: #ffffff;
+
+      color: #fff;
+      width: 100%;
+      height: 100%;
+
+      .tr {
+        cursor: pointer;
+      }
+
+      .t-down {
+        position: relative;
+        z-index: 8;
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 388px solid transparent;
+        border-right: 388px solid transparent;
+        border-top: 288px solid @grey-hover;
+        -webkit-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+
+        &:hover {
+          border-top-color: #7f8283;
+        }
+      }
+
+      .t-right {
+          position: relative;
+          z-index: 5;
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-bottom: 288px solid transparent;
+          border-left: 388px solid @grey-hover;
+          border-top: 288px solid transparent;
+          margin-top: -286px;
+          -webkit-transform:rotate(360deg);
+
+          &:hover {
+            border-left-color: #7f8283;
+          }
+      }
+
+      .t-left {
+        position: relative;
+        z-index: 7;
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-bottom: 288px solid transparent;
+        border-right: 388px solid @grey-hover;
+        border-top: 288px solid transparent;
+        margin-top: -576px;
+        float: right;
+        -webkit-transform:rotate(360deg);
+
+        &:hover {
+          border-right-color: #7f8283;
+        }
+      }
+
+      .t-up {
+        position: relative;
+        z-index: 6;
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 388px solid transparent;
+        border-right: 388px solid transparent;
+        border-bottom: 288px solid @grey-hover;
+        -webkit-transform:rotate(360deg);
+        margin-top: -286px;
+
+        &:hover {
+          border-bottom-color: #7f8283;
+        }
+      }
+
+      .slide-link {
+          position: absolute;
+          color: #fff;
+          text-decoration: none;
+
+        &.f {
+          top: 15%;
+          left: 40%;
+
+        }
+
+        &.t {
+          right: 8%;
+          top: 45%;
+        }
+
+        /*&.t {
+          content: '';
+          display: block;
+          width: 0;
+          height: 0;
+          border-bottom: 390px solid transparent;
+          border-left: 250px solid @grey-hover;
+          border-top: 390px solid transparent;
+          float: left;
+        }*/
+/*
+        &.fo {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 390px solid transparent;
+            border-right: 390px solid transparent;
+            border-bottom: 250px solid @grey-hover;
+        }*/
+      }
+    }
+  }
+
+}
+
+/******************************
+ SLIDE AGENCY
+*******************************/
+#slide_agency{
+  background-color: @grey-hover;
+
+  .wrapper {
+    background: #fff;
+    padding: 12px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+
+  }
+
+  .link_block {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: #73157c;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.2;
+    }
+
+    &:hover {
+      background: @grey-hover;
+    }
+  }
+
+  .button {
+    top: 85px;
+    left: 0;
+  }
+
+}
+
+/******************************
+ SLIDE SERVICES
+*******************************/
+
+#slide_services {
+  background-color: @grey-hover;
+
+  .wrapper {
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+
+    padding: 12px;
+  }
+
+  .slide-link {
+    background-color: #ec6500;
+    display: block;
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin-bottom: 1px;
+    line-height: 2.5em;
+
+    &:hover {
+      background-color: @grey-hover;
+    }
+  }
+
+  .button {
+    right: 85px;
+    top: -7px;
+    left: auto;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+#slide_mission {
+  background-color: @grey-hover;
+
+  .button {
+    top: 85px;
+    left: 0px;
+  }
+
+  .wrapper {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    padding: 12px;
+
+    .content {
+      background-color: #73157c;
+
+      color: #fff;
+      width: 100%;
+      height: 100%;
+
+      div {
+        padding: 5% 95px;
+      }
+
+      h1 {
+        text-decoration: underline;
+        text-transform: uppercase;
+        margin-bottom: 55px;
+        font-weight: bold;
+      }
+
+    }
+  }
+
+}
+
+#slide_worth {
+
+  .wrapper {
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    padding: 12px;
+    text-align: center;
+
+    .content {
+      background: url(../img/clock-shadow.png) no-repeat center #eee;
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-top: -231px;
+      margin-left: -212px;
+    }
+  }
+}
+
+
+
+/******************************
+ SLIDE BUDDA
+*******************************/
+
+#slide_budda {
+  overflow: hidden;
+
+  .wrapper {
+    background-color: #fff;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    padding: 12px;
+    text-align: center;
+    overflow: hidden;
+
+    .content {
+      background-color: #73157c;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      h1 {
+        font-size: 1.65em;
+        position: absolute;
+        left: 4px;
+        top: 10px;
+        text-align: left;
+        color: #f6f6f6;
+        line-height: 0.8em;
+      }
+
+      p {
+        color: #ffffff;
+        text-transform: uppercase;
+        position: absolute;
+      }
+    }
+
+    img.buda {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      margin-left: -392px;
+    }
+  }
+
+  .button {
+    top: auto;
+    bottom: 85px;
+    left: 0px;
+  }
+}
+
+
+
+
+
+@media all {
+  .slide article {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+@media (min-height: 960px) {
+
+  .slide article {
+    width: 1280px;
+    height: 960px;
+  }
+
+
+}
+
+@media (min-height: 768px) and (max-height: 960px) {
+
+  .slide article {
+    width: 1024px;
+    height: 768px;
+    font-size: @size/1.3;
+
+    margin-left: -512px;
+    margin-top: -384px;
+  }
+
+  #slide_agency .link_block {
+    line-height: 700px;
+  }
+
+  #slide_budda {
+    p {
+      font-size: 0.26em;
+      &.l-1 {
+        top: 250px;
+        left: 180px;
+
+      }
+
+      &.l-2 {
+        top: 400px;
+        left: 100px;
+      }
+
+      &.l-3 {
+        top: 600px;
+        left: 140px;
+      }
+
+      &.r-1 {
+        top: 250px;
+        right: 185px;
+      }
+
+      &.r-2 {
+        top: 385px;
+        right: 90px;
+      }
+
+      &.r-3 {
+        top: 595px;
+        right: 120px;
+      }
+    }
+    img.p-line {
+      position: absolute;
+      &.l-1 {
+        top: 255px;
+        left: 275px;
+      }
+
+      &.l-2 {
+        top: 414px;
+        left: 205px;
+      }
+
+      &.l-3 {
+        top: 540px;
+        left: 245px;
+      }
+
+      &.r-1 {
+        top: 255px;
+        right: 295px;
+      }
+
+      &.r-2 {
+        top: 414px;
+        right: 225px;
+      }
+
+      &.r-3 {
+        top: 545px;
+        right: 250px;
+      }
+
+    }
+  }
+
+
+  p {
+    font-size: 0.5em;
+  }
+
+}
+
+
+@media (max-height: 768px) {
+
+  .slide article {
+    height: 600px;
+    width: 800px;
+    font-size: @size/1.6;
+
+    margin-left: -400px;
+    margin-top: -300px;
+  }
+
+  #slide_agency .link_block {
+    line-height: 500px;
+  }
+
+  #slide_budda {
+    .wrapper {
+
+      img.buda {
+        width: 80%;
+        margin-left: -320px;
+      }
+    }
+  }
+
+  #slide_budda {
+    p {
+      font-size: 0.26em;
+
+      &.l-1 {
+        top: 250px;
+        left: 180px;
+
+      }
+
+      &.l-2 {
+        top: 400px;
+        left: 100px;
+      }
+
+      &.l-3 {
+        top: 600px;
+        left: 140px;
+      }
+
+      &.r-1 {
+        top: 250px;
+        right: 185px;
+      }
+
+      &.r-2 {
+        top: 385px;
+        right: 90px;
+      }
+
+      &.r-3 {
+        top: 595px;
+        right: 120px;
+      }
+    }
+    img.p-line {
+      width: 10%;
+      position: absolute;
+      &.l-1 {
+        top: 255px;
+        left: 275px;
+      }
+
+      &.l-2 {
+        top: 414px;
+        left: 205px;
+      }
+
+      &.l-3 {
+        top: 540px;
+        left: 245px;
+      }
+
+      &.r-1 {
+        top: 255px;
+        right: 295px;
+      }
+
+      &.r-2 {
+        top: 414px;
+        right: 225px;
+      }
+
+      &.r-3 {
+        top: 545px;
+        right: 250px;
+      }
+
+    }
+  }
+
+  h1 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.5em;
+  }
+
 }
