@@ -12,7 +12,7 @@ jQuery ->
   $('.slide-link, .button').on 'click', ->
     parallax.speed = 2000
     parallax.easing = 'easeInOutQuint'
-    parallax.scaling = 0.15
+    parallax.scaling = 0.9
 
     slide = 'slide_'+$(this).attr('data-slide')
     direction = $(this).attr('data-direction')

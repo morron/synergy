@@ -6,7 +6,7 @@ jQuery(function () {
     var direction, slide;
     parallax.speed = 2e3;
     parallax.easing = 'easeInOutQuint';
-    parallax.scaling = .15;
+    parallax.scaling = .9;
     slide = 'slide_' + $(this).attr('data-slide');
     direction = $(this).attr('data-direction');
     if (direction === 'top')
