@@ -1,5 +1,30 @@
 jQuery ->
 
+  parallax.add($("#slide_index"))
+  .add($("#slide_agency"))
+  .add($("#slide_services"))
+  .add($('#slide_mission'))
+  .add($('#slide_budda'))
+  .add($('#slide_worth'))
+
+  parallax.background = $("body")
+
+  $('.slide-link, .button').on 'click', ->
+    parallax.speed = 2000
+    parallax.easing = 'easeInOutQuint'
+    parallax.scaling = 0.15
+
+    slide = 'slide_'+$(this).attr('data-slide')
+    direction = $(this).attr('data-direction')
+    parallax[slide].top() if direction is 'top'
+    parallax[slide].bottom() if direction is 'bottom'
+    parallax[slide].left() if direction is 'left'
+    parallax[slide].right() if direction is 'right'
+
+  parallax.slide_index.show()
+
+###
+
   # инициализация Stellar.js
   $(window).stellar
     # Set scrolling to be in either one or both directions
@@ -67,3 +92,4 @@ jQuery ->
     dataslide = $(this).attr('data-slide')
     orientation = $(this).attr('data-orientation') || 'horizontal'
     goToByScroll(dataslide, orientation)
+###
