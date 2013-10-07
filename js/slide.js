@@ -10,7 +10,7 @@ jQuery(function () {
     horizontalOffset: 0,
     hideDistantElements: true
   });
-  links = $('.slide-link');
+  links = $('.slide-link, .slide-block');
   slide = $('.slide');
   button = $('.button');
   mywindow = $(window);

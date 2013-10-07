@@ -15,7 +15,7 @@ jQuery ->
     hideDistantElements: true
 
   # Кэш некоторых переменных
-  links = $('.slide-link')
+  links = $('.slide-link, .slide-block')
   slide = $('.slide')
   button = $('.button')
   mywindow = $(window)
