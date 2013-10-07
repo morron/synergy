@@ -6,7 +6,7 @@ void function () {
     gameWidth = $('#canvascontainer').parent().innerWidth();
     gameHeight = $('#canvascontainer').parent().innerHeight();
     scaleToFitX = gameWidth / 1e3;
-    scaleToFitY = gameHeight / 724;
+    scaleToFitY = gameHeight / 700;
     optimalRatio = Math.min(scaleToFitX, scaleToFitY);
     stage.setScale(optimalRatio);
     return triangleRedraw();

@@ -3,10 +3,10 @@ OnResizeCalled = () ->
   gameHeight = $('#canvascontainer').parent().innerHeight()
 
   scaleToFitX = gameWidth / 1000
-  scaleToFitY = gameHeight / 724
+  scaleToFitY = gameHeight / 700
 
   optimalRatio = Math.min scaleToFitX, scaleToFitY
-#
+
   stage.setScale(optimalRatio);
 #  stage.setScaleX(scaleToFitX);
 #  stage.setScaleY(scaleToFitY);
@@ -41,9 +41,8 @@ gameHeight = $('#canvascontainer').parent().innerHeight()
 
 scaleToFitX = gameWidth / 1000
 scaleToFitY = gameHeight / 700
-#
+
 optimalRatio = Math.min scaleToFitX, scaleToFitY
-#console.log($('#canvascontainer').parent().innerWidth());
 
 stage = new Kinetic.Stage
   container: 'canvascontainer'
