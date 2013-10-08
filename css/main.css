@@ -51,11 +51,41 @@ h1 {
   width: 100%;
   height: 100%;
 }
+.padding_wrapper {
+  background: #fff;
+  padding: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
 .wrapper {
   background-attachment: fixed;
+  background: #fff;
+  padding: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
+.wrapper .content {
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
-  position: relative;
+}
+.wrapper .content div.text-block {
+  padding: 5% 95px;
+}
+.wrapper .content div.text-block h1 {
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin-bottom: 55px;
+  font-weight: bold;
 }
 .wrapper * {
   -webkit-transition: all 0.15s linear 0.2s ease-out 0;
@@ -134,6 +164,25 @@ h1 {
 #slide_index .wrapper .content .slide-link.fo {
   left: 8%;
   top: 45%;
+}
+/******************************
+ SLIDE CONTACTS
+*******************************/
+#slide_contacts {
+  background-color: #b4b6b7;
+}
+#slide_contacts .wrapper .content {
+  background-color: #c0195e;
+}
+#slide_contacts .button {
+  top: 85px;
+  right: 0;
+  left: auto;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 /******************************
  SLIDE AGENCY
@@ -251,15 +300,6 @@ h1 {
   color: #fff;
   width: 100%;
   height: 100%;
-}
-#slide_mission .wrapper .content div {
-  padding: 5% 95px;
-}
-#slide_mission .wrapper .content h1 {
-  text-decoration: underline;
-  text-transform: uppercase;
-  margin-bottom: 55px;
-  font-weight: bold;
 }
 #slide_worth .wrapper {
   background-color: #fff;

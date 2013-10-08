@@ -80,18 +80,23 @@ triangleBottom.on('mouseout', triangleMouseout)
 
 triangleLeft.on('mouseover', triangleMouseover)
 triangleLeft.on('mouseout', triangleMouseout)
+triangleLeft.on 'click', ->
+  $parent.find('.slide-link.fo').click()
+  this.fire 'mouseout'
 
 triangleRight.on('mouseover', triangleMouseover)
 triangleRight.on('mouseout', triangleMouseout)
-triangleRight.on('click', ->
+triangleRight.on 'click', ->
   $parent.find('.slide-link.t').click()
-)
+  this.fire 'mouseout'
+
 
 triangleTop.on('mouseover', triangleMouseover)
 triangleTop.on('mouseout', triangleMouseout)
-triangleTop.on('click', ->
+triangleTop.on 'click', ->
   $parent.find('.slide-link.f').click()
-)
+  this.fire 'mouseout'
+
 
 # add the shape to the layer
 layer.add(triangleRight)
@@ -105,7 +110,10 @@ OnResizeCalled()
 stage.add(layer)
 
 $parent.find('.slide-link.f').on 'mouseover', ->
-  triangleTop.fire('mouseover')
+  triangleTop.fire 'mouseover'
 
 $parent.find('.slide-link.t').on 'mouseover', ->
-  triangleRight.fire('mouseover')
+  triangleRight.fire 'mouseover'
+
+$parent.find('.slide-link.fo').on 'mouseover', ->
+  triangleLeft.fire 'mouseover'
