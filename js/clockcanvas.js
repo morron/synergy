@@ -119,11 +119,13 @@ void function () {
   });
   triangleMouseover = function () {
     this.setFill('#73157C');
+    this.setOpacity('0.8');
     document.body.style.cursor = 'pointer';
     return layer.draw();
   };
   triangleMouseout = function () {
     this.setFill('#b4b6b7');
+    this.setOpacity('0.3');
     document.body.style.cursor = 'default';
     return layer.draw();
   };

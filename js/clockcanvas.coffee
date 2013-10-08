@@ -71,11 +71,13 @@ triangleTop = new Kinetic.Polygon
 
 triangleMouseover = () ->
   this.setFill('#73157C')
+  this.setOpacity('0.8')
   document.body.style.cursor = 'pointer'
   layer.draw()
 
 triangleMouseout = () ->
   this.setFill('#b4b6b7')
+  this.setOpacity('0.3')
   document.body.style.cursor = 'default'
   layer.draw()
 
