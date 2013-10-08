@@ -3,15 +3,14 @@ void function () {
   var $parent, gameHeight, gameWidth, layer, OnResizeCalled, optimalRatio, scaleToFitX, scaleToFitY, stage, triangleBottom, triangleLeft, triangleMouseout, triangleMouseover, triangleRedraw, triangleRight, triangleTop;
   OnResizeCalled = function () {
     var gameHeight, gameWidth, optimalRatio, scaleToFitX, scaleToFitY;
-    gameWidth = $('#index-triangle').parent().innerWidth();
-    gameHeight = $('#index-triangle').parent().innerHeight();
+    gameWidth = $('#clock-triangle').parent().innerWidth();
+    gameHeight = $('#clock-triangle').parent().innerHeight();
     scaleToFitX = gameWidth / 1e3;
     scaleToFitY = gameHeight / 700;
     optimalRatio = Math.min(scaleToFitX, scaleToFitY);
     stage.setScale(optimalRatio);
     return triangleRedraw();
   };
-  $parent = $('#slide_index');
   triangleRedraw = function () {
     layer.clear();
     triangleLeft.setPoints([
@@ -49,21 +48,23 @@ void function () {
     return layer.draw();
   };
   window.addEventListener('resize', OnResizeCalled, false);
-  gameWidth = $('#index-triangle').parent().innerWidth();
-  gameHeight = $('#index-triangle').parent().innerHeight();
+  $parent = $('#slide_worth');
+  gameWidth = $('#clock-triangle').parent().innerWidth();
+  gameHeight = $('#clock-triangle').parent().innerHeight();
   scaleToFitX = gameWidth / 1e3;
   scaleToFitY = gameHeight / 700;
   optimalRatio = Math.min(scaleToFitX, scaleToFitY);
   stage = new Kinetic.Stage({
-    container: 'index-triangle',
-    width: $('#index-triangle').parent().innerWidth(),
-    height: $('#index-triangle').parent().innerHeight(),
+    container: 'clock-triangle',
+    width: $('#clock-triangle').parent().innerWidth(),
+    height: $('#clock-triangle').parent().innerHeight(),
     scale: optimalRatio
   });
   layer = new Kinetic.Layer;
   triangleRight = new Kinetic.Polygon({
     fill: '#b4b6b7',
     stroke: 'white',
+    opacity: .3,
     strokeWidth: 1,
     points: [
       stage.getWidth() / 2,
@@ -77,6 +78,7 @@ void function () {
   triangleBottom = new Kinetic.Polygon({
     fill: '#b4b6b7',
     stroke: 'white',
+    opacity: .3,
     strokeWidth: 1,
     points: [
       stage.getWidth() / 2,
@@ -90,6 +92,7 @@ void function () {
   triangleLeft = new Kinetic.Polygon({
     fill: '#b4b6b7',
     stroke: 'white',
+    opacity: .3,
     strokeWidth: 1,
     points: [
       stage.getWidth() / 2,
@@ -103,6 +106,7 @@ void function () {
   triangleTop = new Kinetic.Polygon({
     fill: '#b4b6b7',
     stroke: 'white',
+    opacity: .3,
     strokeWidth: 1,
     points: [
       stage.getWidth() / 2,
@@ -114,7 +118,7 @@ void function () {
     ]
   });
   triangleMouseover = function () {
-    this.setFill('#7f8283');
+    this.setFill('#73157C');
     document.body.style.cursor = 'pointer';
     return layer.draw();
   };

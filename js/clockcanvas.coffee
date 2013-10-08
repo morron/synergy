@@ -1,6 +1,6 @@
 OnResizeCalled = () ->
-  gameWidth = $('#index-triangle').parent().innerWidth()
-  gameHeight = $('#index-triangle').parent().innerHeight()
+  gameWidth = $('#clock-triangle').parent().innerWidth()
+  gameHeight = $('#clock-triangle').parent().innerHeight()
 
   scaleToFitX = gameWidth / 1000
   scaleToFitY = gameHeight / 700
@@ -10,8 +10,6 @@ OnResizeCalled = () ->
   stage.setScale(optimalRatio)
 
   triangleRedraw()
-
-$parent = $ '#slide_index'
 
 triangleRedraw = () ->
   layer.clear()
@@ -23,8 +21,10 @@ triangleRedraw = () ->
 
 window.addEventListener("resize", OnResizeCalled, false)
 
-gameWidth = $('#index-triangle').parent().innerWidth()
-gameHeight = $('#index-triangle').parent().innerHeight()
+$parent = $ '#slide_worth'
+
+gameWidth = $('#clock-triangle').parent().innerWidth()
+gameHeight = $('#clock-triangle').parent().innerHeight()
 
 scaleToFitX = gameWidth / 1000
 scaleToFitY = gameHeight / 700
@@ -32,9 +32,9 @@ scaleToFitY = gameHeight / 700
 optimalRatio = Math.min scaleToFitX, scaleToFitY
 
 stage = new Kinetic.Stage
-  container: 'index-triangle'
-  width: $('#index-triangle').parent().innerWidth()
-  height: $('#index-triangle').parent().innerHeight()
+  container: 'clock-triangle'
+  width: $('#clock-triangle').parent().innerWidth()
+  height: $('#clock-triangle').parent().innerHeight()
   scale: optimalRatio
 
 layer = new Kinetic.Layer()
@@ -42,12 +42,14 @@ layer = new Kinetic.Layer()
 triangleRight = new Kinetic.Polygon
   fill: '#b4b6b7'
   stroke: 'white'
+  opacity: 0.3
   strokeWidth: 1
   points : [ stage.getWidth() / 2 ,stage.getHeight() / 2 , stage.getWidth(), 0, stage.getWidth(), stage.getHeight() ]
 
 triangleBottom = new Kinetic.Polygon
   fill: '#b4b6b7'
   stroke: 'white'
+  opacity: 0.3
   strokeWidth: 1
   points : [ stage.getWidth() / 2 ,stage.getHeight() / 2 , 0, stage.getHeight(), stage.getWidth(), stage.getHeight() ]
 
@@ -55,6 +57,7 @@ triangleBottom = new Kinetic.Polygon
 triangleLeft = new Kinetic.Polygon
   fill: '#b4b6b7'
   stroke: 'white'
+  opacity: 0.3
   strokeWidth: 1
   points : [ stage.getWidth() / 2 ,stage.getHeight() / 2, 0, 0, 0, stage.getHeight() ]
 
@@ -62,11 +65,12 @@ triangleLeft = new Kinetic.Polygon
 triangleTop = new Kinetic.Polygon
   fill: '#b4b6b7'
   stroke: 'white'
+  opacity: 0.3
   strokeWidth: 1
   points : [ stage.getWidth() / 2 ,stage.getHeight() / 2, 0, 0, stage.getWidth(), 0 ]
 
 triangleMouseover = () ->
-  this.setFill('#7f8283')
+  this.setFill('#73157C')
   document.body.style.cursor = 'pointer'
   layer.draw()
 
@@ -109,3 +113,4 @@ $parent.find('.slide-link.f').on 'mouseover', ->
 
 $parent.find('.slide-link.t').on 'mouseover', ->
   triangleRight.fire('mouseover')
+
