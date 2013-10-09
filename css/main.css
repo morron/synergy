@@ -508,6 +508,42 @@ h1 {
   .slide article {
     width: 1280px;
     height: 960px;
+    margin-left: -640px;
+    margin-top: -480px;
+  }
+  .text-block h1 {
+    font-size: 1.6em;
+  }
+  .text-block p {
+    font-size: 0.69em;
+  }
+  #slide_agency .link_block {
+    line-height: 950px;
+    font-size: 1.3em;
+  }
+  #slide_mission .text-block p {
+    padding-right: 20%;
+  }
+  #slide_marketing .wrapper img.marketing {
+    width: 100%;
+    left: -17px;
+    top: -15px;
+  }
+  #slide_marketing .wrapper .content h1 {
+    font-size: 1.44em;
+    left: -9px;
+    top: -3px;
+  }
+  #slide_development .wrapper .content h1 {
+    left: -7px;
+    font-size: 1.1em;
+  }
+  #slide_budda .wrapper .content h1 {
+    left: -10px;
+  }
+  #slide_budda .wrapper img.buda {
+    width: 80%;
+    margin-left: -502px;
   }
 }
 @media (min-height: 768px) and (max-height: 960px) {
