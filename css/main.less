@@ -556,6 +556,61 @@ h1 {
 }
 
 
+/******************************
+ SLIDE MARKETING
+*******************************/
+
+#slide_marketing {
+  overflow: hidden;
+
+  .wrapper {
+    background-color: #fff;
+
+    .content {
+      background: url(../img/bg-marketing.png) repeat 0 0 #cb1e6c;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+
+      h1 {
+        font-size: 1.53em;
+        position: absolute;
+        left: -7px;
+        top: -2px;
+        text-align: left;
+        color: #f6f6f6;
+        line-height: 0.8em;
+      }
+
+      p {
+        color: #ffffff;
+        text-transform: uppercase;
+        position: absolute;
+      }
+    }
+
+    img.marketing {
+      position: absolute;
+      left: -14px;
+      top: -11px;
+    }
+  }
+
+  .button {
+    top: auto;
+    right: 85px;
+    bottom: -7px;
+    left: auto;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+}
+
+
 
 @media all {
   .slide article {
@@ -690,6 +745,21 @@ h1 {
 
   #slide_agency .link_block {
     line-height: 500px;
+  }
+
+  #slide_marketing {
+    .wrapper {
+      img.marketing {
+        width: 100%;
+        left: -7px;
+        top: -8px;
+      }
+      .content {
+        h1 {
+          font-size: 1.44em;
+        }
+      }
+    }
   }
 
   #slide_budda {
