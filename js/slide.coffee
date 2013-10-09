@@ -7,6 +7,7 @@ jQuery ->
   .add($('#slide_budda'))
   .add($('#slide_worth'))
   .add($("#slide_contacts"))
+  .add($('#slide_development'))
 
   parallax.background = $("body")
 
