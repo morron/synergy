@@ -520,14 +520,61 @@ h1 {
   line-height: 0.8em;
 }
 #slide_pmarketing .wrapper .content p {
-  color: #ffffff;
+  color: #242424;
   text-transform: uppercase;
   position: absolute;
+  z-index: 10;
+  font-size: 0.29em;
+  text-align: center;
 }
-#slide_pmarketing .wrapper img.marketing {
-  position: absolute;
-  left: -14px;
-  top: -11px;
+#slide_pmarketing .wrapper .content p.egg-f-row-title {
+  top: 33%;
+}
+#slide_pmarketing .wrapper .content p.egg-s-row-title {
+  top: 76%;
+}
+#slide_pmarketing .wrapper .content p.egg-s-row-title.s {
+  font-size: 0.25em;
+  left: 33.3%;
+  top: 77%;
+}
+#slide_pmarketing .wrapper .content p.egg-s-row-title.t {
+  top: 78%;
+  left: 59.5%;
+}
+#slide_pmarketing .wrapper .content p.egg-s-row-title.fo {
+  top: 74%;
+}
+#slide_pmarketing .wrapper .content p.f {
+  left: 11.5%;
+}
+#slide_pmarketing .wrapper .content p.s {
+  left: 34.3%;
+}
+#slide_pmarketing .wrapper .content p.t {
+  left: 55.5%;
+  top: 31%;
+}
+#slide_pmarketing .wrapper .content p.fo {
+  left: 78.2%;
+}
+#slide_pmarketing .wrapper figure {
+  margin: 0 10%;
+  width: 100%;
+}
+#slide_pmarketing .wrapper figure img {
+  margin-right: 5%;
+  position: relative;
+}
+#slide_pmarketing .wrapper figure img:nth-child(4n) {
+  margin-right: 0;
+}
+#slide_pmarketing .wrapper figure .egg-f-row {
+  z-index: 5;
+}
+#slide_pmarketing .wrapper figure .egg-s-row {
+  margin-top: -90px;
+  z-index: 4;
 }
 #slide_pmarketing .button {
   top: auto;
@@ -599,6 +646,14 @@ h1 {
     font-size: 76.92307692307692px;
     margin-left: -512px;
     margin-top: -384px;
+  }
+  #slide_pmarketing .wrapper figure img {
+    width: 150px;
+  }
+  #slide_pmarketing .wrapper figure .content figcaption p {
+    color: #000;
+    position: relative;
+    top: 0;
   }
   #slide_agency .link_block {
     line-height: 700px;
@@ -686,6 +741,9 @@ h1 {
   #slide_budda .wrapper img.buda {
     width: 80%;
     margin-left: -305px;
+  }
+  #slide_pmarketing .wrapper figure img {
+    width: 115px;
   }
   #slide_worth .content {
     font-size: 0.7em;

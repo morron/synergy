@@ -639,17 +639,84 @@ h1 {
       }
 
       p {
-        color: #ffffff;
+        color: #242424;
         text-transform: uppercase;
         position: absolute;
+        z-index: 10;
+        font-size: 0.29em;
+        text-align: center;
+
+        &.egg-f-row-title {
+          top: 33%;
+
+        }
+
+        &.egg-s-row-title {
+          top: 76%;
+
+          &.s {
+            font-size: 0.25em;
+            left: 33.3%;
+            top: 77%;
+          }
+
+          &.t {
+            top: 78%;
+            left: 59.5%;
+          }
+
+          &.fo {
+            top: 74%;
+          }
+
+        }
+
+        &.f {
+          left: 11.5%;
+        }
+
+        &.s {
+          left: 34.3%;
+        }
+
+        &.t {
+          left: 55.5%;
+          top: 31%;
+        }
+
+        &.fo {
+          left: 78.2%;
+
+        }
+
+
+
+      }
+
+
+    }
+
+    figure {
+      margin: 0 10%;
+      width: 100%;
+
+      img {
+        margin-right: 5%;
+        position: relative;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+
+      .egg-f-row {
+        z-index: 5;
+      }
+      .egg-s-row {
+          margin-top: -90px;
+          z-index: 4;
       }
     }
 
-    img.marketing {
-      position: absolute;
-      left: -14px;
-      top: -11px;
-    }
   }
 
   .button {
@@ -769,6 +836,26 @@ h1 {
 
     margin-left: -512px;
     margin-top: -384px;
+  }
+
+  #slide_pmarketing {
+    .wrapper {
+      figure {
+        img {
+          width: 150px;
+        }
+
+        .content {
+          figcaption {
+            p {
+              color: #000;
+              position: relative;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
   }
 
   #slide_agency .link_block {
@@ -894,6 +981,16 @@ h1 {
       img.buda {
         width: 80%;
         margin-left: -305px;
+      }
+    }
+  }
+
+  #slide_pmarketing {
+    .wrapper {
+      figure {
+        img {
+          width: 115px;
+        }
       }
     }
   }
