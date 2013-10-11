@@ -7,3 +7,16 @@ jQuery ->
       'img/splash-3.png'
       'img/splash-4.png'
     ]
+
+  $('#slide_pmarketing figure').on 'mouseover', ->
+    $(this).find('img').not('[rel=img]').stop().fadeTo 'slow', 0
+    $(this).find('figcaption').hide()
+    $(this).find('[rel=img]').stop().fadeTo 'slow', 1
+
+  $('#slide_pmarketing figure').on 'mouseout', ->
+    $(this).find('[rel=img]').stop().fadeTo 'fast', 0
+    $(this).find('img').not('[rel=img]').stop().fadeTo 'fast', 1
+    $(this).find('figcaption').show()
+
+
+
