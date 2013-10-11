@@ -131,18 +131,15 @@ void function () {
   };
   triangleBottom.on('mouseover', triangleMouseover);
   triangleBottom.on('mouseout', triangleMouseout);
+  triangleBottom.on('mouseover', function () {
+    return $parent.find('.slide-link.th span').mouseover();
+  });
   triangleLeft.on('mouseover', triangleMouseover);
   triangleLeft.on('mouseout', triangleMouseout);
   triangleRight.on('mouseover', triangleMouseover);
   triangleRight.on('mouseout', triangleMouseout);
-  triangleRight.on('click', function () {
-    return $parent.find('.slide-link.t').click();
-  });
   triangleTop.on('mouseover', triangleMouseover);
   triangleTop.on('mouseout', triangleMouseout);
-  triangleTop.on('click', function () {
-    return $parent.find('.slide-link.f').click();
-  });
   layer.add(triangleRight);
   layer.add(triangleBottom);
   layer.add(triangleLeft);
@@ -154,5 +151,11 @@ void function () {
   });
   $parent.find('.slide-link.t').on('mouseover', function () {
     return triangleRight.fire('mouseover');
+  });
+  $parent.find('.slide-link.th').on('mouseover', function () {
+    return triangleBottom.fire('mouseover');
+  });
+  $parent.find('.slide-link.fo').on('mouseover', function () {
+    return triangleLeft.fire('mouseover');
   });
 }.call(this);

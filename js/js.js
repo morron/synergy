@@ -14,9 +14,13 @@ jQuery(function () {
     $(this).find('figcaption').hide();
     return $(this).find('[rel=img]').stop().fadeTo('slow', 1);
   });
-  return $('#slide_pmarketing figure').on('mouseout', function () {
+  $('#slide_pmarketing figure').on('mouseout', function () {
     $(this).find('[rel=img]').stop().fadeTo('fast', 0);
     $(this).find('img').not('[rel=img]').stop().fadeTo('fast', 1);
     return $(this).find('figcaption').show();
+  });
+  return $('#slide_worth .slide-link span').on('mouseover', function () {
+    $(this).after('<p rel="hover">' + $(this).data('hover') + '</p>');
+    return $(this).hide();
   });
 });
