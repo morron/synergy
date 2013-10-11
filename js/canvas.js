@@ -125,6 +125,10 @@ void function () {
   };
   triangleBottom.on('mouseover', triangleMouseover);
   triangleBottom.on('mouseout', triangleMouseout);
+  triangleBottom.on('click', function () {
+    $parent.find('.slide-link.th').click();
+    return this.fire('mouseout');
+  });
   triangleLeft.on('mouseover', triangleMouseover);
   triangleLeft.on('mouseout', triangleMouseout);
   triangleLeft.on('click', function () {

@@ -10,6 +10,7 @@ jQuery ->
   .add($('#slide_development'))
   .add($('#slide_marketing'))
   .add($('#slide_pmarketing'))
+  .add($('#slide_geography'))
 
   parallax.background = $("body")
 

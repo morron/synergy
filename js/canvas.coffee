@@ -77,6 +77,9 @@ triangleMouseout = () ->
 
 triangleBottom.on('mouseover', triangleMouseover)
 triangleBottom.on('mouseout', triangleMouseout)
+triangleBottom.on 'click', ->
+  $parent.find('.slide-link.th').click()
+  this.fire 'mouseout'
 
 triangleLeft.on('mouseover', triangleMouseover)
 triangleLeft.on('mouseout', triangleMouseout)
