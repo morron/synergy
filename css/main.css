@@ -789,56 +789,72 @@ h1 {
   #slide_pmarketing .wrapper figure {
     max-width: 115px;
   }
+  #slide_pmarketing .wrapper figure img {
+    width: 100%;
+  }
+  #slide_pmarketing .wrapper figure img[rel=img] {
+    width: auto;
+  }
   #slide_pmarketing .wrapper figure.egg-f-row.f figcaption {
     top: 63%;
-    left: 16px;
+    left: 11px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.f [rel=img] {
     left: -3px;
+    width: 302px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.s figcaption {
     top: 63%;
-    left: 26px;
+    left: 18px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.s [rel=img] {
-    left: -11px;
+    left: -8px;
+    width: 110%;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.t figcaption {
-    left: 18px;
+    left: 17px;
     top: 60%;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.t [rel=img] {
-    left: -97px;
+    left: -74px;
+    width: 270px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.fo figcaption {
     top: 63%;
-    left: 27px;
+    left: 21px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.fo [rel=img] {
     left: 0;
+    width: 100%;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row [rel=img] {
+    width: 100%;
   }
   #slide_pmarketing .wrapper figure.egg-s-row figcaption {
     top: 65%;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.f figcaption {
-    left: 16px;
+    left: 12px;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.s figcaption {
-    left: 8px;
+    left: 9px;
+    font-size: 0.9em;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.s [rel=img] {
     left: -2px;
+    width: 106%;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.t figcaption {
-    left: 58px;
+    left: 43px;
     top: 68%;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.fo figcaption {
     top: 62%;
-    left: 25px;
+    left: 18px;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.fo [rel=img] {
-    left: -11px;
+    left: -9px;
+    width: 117%;
   }
   #slide_marketing .wrapper img.marketing {
     width: 100%;
