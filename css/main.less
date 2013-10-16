@@ -1059,16 +1059,26 @@ h1 {
       figure {
         max-width: 115px;
 
+        img {
+          width: 100%;
+
+          &[rel=img] {
+            width: auto;
+          }
+        }
+
         &.egg-f-row {
 
           &.f {
             figcaption {
               top: 63%;
-              left: 16px;
+              left: 11px;
             }
+
 
             [rel=img] {
               left: -3px;
+              width: 302px;
             }
 
           }
@@ -1076,38 +1086,45 @@ h1 {
           &.s {
             figcaption {
               top: 63%;
-              left: 26px;
+              left: 18px;
             }
 
             [rel=img] {
-              left: -11px;
+              left: -8px;
+              width: 110%;
             }
           }
 
           &.t {
             figcaption {
-              left: 18px;
+              left: 17px;
               top: 60%;
             }
 
             [rel=img] {
-              left: -97px;
+              left: -74px;
+              width: 270px;
             }
           }
 
           &.fo {
             figcaption {
               top: 63%;
-              left: 27px;
+              left: 21px;
             }
 
             [rel=img] {
               left: 0;
+              width: 100%;
             }
           }
         }
 
         &.egg-s-row {
+
+          [rel=img] {
+            width: 100%;
+          }
 
           figcaption {
             top: 65%;
@@ -1115,24 +1132,30 @@ h1 {
 
           &.f {
             figcaption {
-              left: 16px;
+              left: 12px;
+            }
+
+            [rel=img] {
+
             }
 
           }
 
           &.s {
             figcaption {
-              left: 8px;
+              left: 9px;
+              font-size: 0.9em;
             }
 
             [rel=img] {
               left: -2px;
+              width: 106%;
             }
           }
 
           &.t {
             figcaption {
-              left: 58px;
+              left: 43px;
               top: 68%;
             }
 
@@ -1141,11 +1164,12 @@ h1 {
           &.fo {
             figcaption {
               top: 62%;
-              left: 25px;
+              left: 18px;
             }
 
             [rel=img] {
-              left: -11px;
+              left: -9px;
+              width: 117%;
             }
           }
 
