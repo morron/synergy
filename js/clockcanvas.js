@@ -132,14 +132,43 @@ void function () {
   triangleBottom.on('mouseover', triangleMouseover);
   triangleBottom.on('mouseout', triangleMouseout);
   triangleBottom.on('mouseover', function () {
-    return $parent.find('.slide-link.th span').mouseover();
+    $parent.find('.slide-link.th span').hide();
+    return $parent.find('.slide-link.th p[rel=hover]').show();
+  });
+  triangleBottom.on('mouseout', function () {
+    $parent.find('.slide-link.th span').show();
+    return $parent.find('.slide-link.th p[rel=hover]').hide();
   });
   triangleLeft.on('mouseover', triangleMouseover);
   triangleLeft.on('mouseout', triangleMouseout);
+  triangleLeft.on('mouseover', function () {
+    $parent.find('.slide-link.fo span').hide();
+    return $parent.find('.slide-link.fo p[rel=hover]').show();
+  });
+  triangleLeft.on('mouseout', function () {
+    $parent.find('.slide-link.fo span').show();
+    return $parent.find('.slide-link.fo p[rel=hover]').hide();
+  });
   triangleRight.on('mouseover', triangleMouseover);
   triangleRight.on('mouseout', triangleMouseout);
+  triangleRight.on('mouseover', function () {
+    $parent.find('.slide-link.t span').hide();
+    return $parent.find('.slide-link.t p[rel=hover]').show();
+  });
+  triangleRight.on('mouseout', function () {
+    $parent.find('.slide-link.t span').show();
+    return $parent.find('.slide-link.t p[rel=hover]').hide();
+  });
   triangleTop.on('mouseover', triangleMouseover);
   triangleTop.on('mouseout', triangleMouseout);
+  triangleTop.on('mouseover', function () {
+    $parent.find('.slide-link.f span').hide();
+    return $parent.find('.slide-link.f p[rel=hover]').show();
+  });
+  triangleTop.on('mouseout', function () {
+    $parent.find('.slide-link.f span').show();
+    return $parent.find('.slide-link.f p[rel=hover]').hide();
+  });
   layer.add(triangleRight);
   layer.add(triangleBottom);
   layer.add(triangleLeft);

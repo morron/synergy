@@ -19,10 +19,10 @@ jQuery ->
     $(this).find('figcaption').show()
 
 
-  $('#slide_worth .slide-link span').on 'mouseover', ->
+  ###$('#slide_worth .slide-link span').on 'click', ->
     $(this).after('<p rel="hover">'+$(this).data('hover')+'</p>')
     $(this).hide()
 
-  ###$('#slide_worth .slide-link p[rel=hover]').on 'mouseout', ->
+  $('#slide_worth .slide-link p[rel=hover]').on 'mouseout', ->
     $(this).siblings('span').show()
     $(this).detach()###

@@ -84,27 +84,43 @@ triangleMouseout = () ->
 triangleBottom.on('mouseover', triangleMouseover)
 triangleBottom.on('mouseout', triangleMouseout)
 triangleBottom.on 'mouseover', ->
-  $parent.find('.slide-link.th span').mouseover()
+  $parent.find('.slide-link.th span').hide()
+  $parent.find('.slide-link.th p[rel=hover]').show()
 
+triangleBottom.on 'mouseout', ->
+  $parent.find('.slide-link.th span').show()
+  $parent.find('.slide-link.th p[rel=hover]').hide()
 
 triangleLeft.on('mouseover', triangleMouseover)
 triangleLeft.on('mouseout', triangleMouseout)
-###triangleLeft.on 'mouseover', ->
-  $parent.find('.slide-link.fo').mouseover()###
+triangleLeft.on 'mouseover', ->
+  $parent.find('.slide-link.fo span').hide()
+  $parent.find('.slide-link.fo p[rel=hover]').show()
 
+triangleLeft.on 'mouseout', ->
+  $parent.find('.slide-link.fo span').show()
+  $parent.find('.slide-link.fo p[rel=hover]').hide()
 
 triangleRight.on('mouseover', triangleMouseover)
 triangleRight.on('mouseout', triangleMouseout)
-###triangleRight.on 'mouseover', ->
-  $parent.find('.slide-link.t').mouseover()###
+triangleRight.on 'mouseover', ->
+  $parent.find('.slide-link.t span').hide()
+  $parent.find('.slide-link.t p[rel=hover]').show()
+
+triangleRight.on 'mouseout', ->
+  $parent.find('.slide-link.t span').show()
+  $parent.find('.slide-link.t p[rel=hover]').hide()
 
 
 triangleTop.on('mouseover', triangleMouseover)
 triangleTop.on('mouseout', triangleMouseout)
-###triangleTop.on 'mouseover', ->
-  $parent.find('.slide-link.f').mouseover()
+triangleTop.on 'mouseover', ->
+  $parent.find('.slide-link.f span').hide()
+  $parent.find('.slide-link.f p[rel=hover]').show()
+
 triangleTop.on 'mouseout', ->
-  $parent.find('.slide-link.f').mouseout()###
+  $parent.find('.slide-link.f span').show()
+  $parent.find('.slide-link.f p[rel=hover]').hide()
 
 
 # add the shape to the layer

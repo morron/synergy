@@ -352,21 +352,40 @@ h1 {
   color: #fff;
   text-decoration: none;
 }
+#slide_worth .wrapper .content .slide-link [rel=hover] {
+  display: none;
+  position: relative;
+  top: 50%;
+  font-size: 0.6em;
+}
 #slide_worth .wrapper .content .slide-link.f {
   top: 10%;
   left: 41%;
+}
+#slide_worth .wrapper .content .slide-link.f [rel=hover] {
+  top: 0;
+  right: 45px;
 }
 #slide_worth .wrapper .content .slide-link.t {
   right: 5%;
   top: 45%;
 }
+#slide_worth .wrapper .content .slide-link.t [rel=hover] {
+  top: 50%;
+}
 #slide_worth .wrapper .content .slide-link.th {
   bottom: 10%;
   left: 32%;
 }
+#slide_worth .wrapper .content .slide-link.th [rel=hover] {
+  left: 30px;
+}
 #slide_worth .wrapper .content .slide-link.fo {
   top: 42%;
   left: 5%;
+}
+#slide_worth .wrapper .content .slide-link.fo [rel=hover] {
+  top: 30px;
 }
 #slide_worth .wrapper img {
   position: absolute;

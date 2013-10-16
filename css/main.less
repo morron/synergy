@@ -437,25 +437,49 @@ h1 {
         color: #fff;
         text-decoration: none;
 
+        [rel=hover] {
+          display:none;
+          position: relative;
+          top: 50%;
+          font-size: 0.6em;
+        }
+
         &.f {
           top: 10%;
           left: 41%;
+
+          [rel=hover] {
+            top: 0;
+            right: 45px;
+          }
 
         }
 
         &.t {
           right: 5%;
           top: 45%;
+
+          [rel=hover] {
+            top: 50%;
+          }
         }
 
         &.th {
           bottom: 10%;
           left: 32%;
+
+          [rel=hover] {
+            left: 30px;
+          }
         }
 
         &.fo {
           top: 42%;
           left: 5%;
+
+          [rel=hover] {
+            top: 30px;
+          }
         }
       }
     }
