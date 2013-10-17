@@ -719,6 +719,9 @@ p {
     width: 80%;
     margin-left: -502px;
   }
+  #slide_worth .wrapper .content .slide-link {
+    font-size: 0.7em;
+  }
   #slide_pmarketing .wrapper figure {
     min-width: 200px;
   }
