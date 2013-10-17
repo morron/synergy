@@ -45,6 +45,7 @@ p {
   background-color: #f5f5f4;
   background-repeat: no-repeat;
   text-align: center;
+  z-index: 100000;
 }
 .wrap {
   min-width: 1000px;
@@ -84,6 +85,50 @@ p {
   bottom: 0;
   width: auto;
   height: auto;
+}
+.wrapper .top-menu-block {
+  border: 1px solid #fff;
+  border-top: none;
+  background: transparent;
+  padding: 10px;
+  position: absolute;
+  font-size: 0.1em;
+  text-transform: none;
+  z-index: 7;
+  width: 34em;
+  left: 50%;
+  margin-left: -16em;
+  text-align: center;
+  color: #fff;
+}
+.wrapper .top-menu-block .linkedin {
+  float: left;
+}
+.wrapper .top-menu-block .logo {
+  text-align: center;
+  font-size: 1.1em;
+}
+.wrapper .top-menu-block .mailme {
+  background: url(../img/icon-mailme.png) no-repeat transparent;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  float: right;
+}
+.wrapper .top-menu-block .phoneme {
+  background: url(../img/icon-phoneme.png) no-repeat transparent;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-left: 5px;
+}
+.wrapper .top-menu-block a {
+  color: #fff;
+  text-decoration: none;
+}
+.wrapper .top-menu-block a.hover {
+  text-decoration: underline;
 }
 .wrapper .content {
   width: 100%;
