@@ -722,6 +722,12 @@ p {
   #slide_worth .wrapper .content .slide-link {
     font-size: 0.7em;
   }
+  #slide_contacts .wrapper .content h1 {
+    font-size: 1.3em;
+  }
+  #slide_contacts .wrapper .content p {
+    font-size: 0.59em;
+  }
   #slide_pmarketing .wrapper figure {
     min-width: 200px;
   }
