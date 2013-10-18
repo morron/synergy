@@ -92,7 +92,7 @@ p {
   background: transparent;
   padding: 10px;
   position: absolute;
-  font-size: 0.1em;
+  font-size: 0.11em;
   text-transform: none;
   z-index: 7;
   width: 34em;
@@ -763,6 +763,10 @@ p {
   #slide_budda .wrapper img.buda {
     width: 80%;
     margin-left: -502px;
+  }
+  #slide_geography .wrapper .content h1 {
+    top: 9px;
+    left: 2px;
   }
   #slide_worth .wrapper .content .slide-link {
     font-size: 0.7em;
