@@ -1024,7 +1024,7 @@ p {
     width: 80%;
     margin-left: -305px;
   }
-  #slide_worth .content {
+  #slide_worth .content .inner {
     font-size: 0.7em;
   }
   h1 {
