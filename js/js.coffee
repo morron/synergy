@@ -1,4 +1,17 @@
+OnResizeCalled = () ->
+  console.log 1
+  wHeight = window.innerHeight;
+  wWidth = innerHeight/3*4;
+  $('.slide article').css(
+    width: wWidth
+    height: wHeight
+    marginLeft: (wWidth/2)*(-1)
+  )
+
+window.addEventListener("resize", OnResizeCalled, false)
+
 jQuery ->
+  OnResizeCalled();
   $('#splashImg').splashScreen
     textLayers: [
       'img/splash-0.png'
