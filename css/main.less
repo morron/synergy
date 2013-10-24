@@ -823,14 +823,124 @@ p {
 
       div.egg-block {
         margin: 0 10%;
-        width: 81%;
+        width: 80%;
+      }
+
+      div.egg-block-wrapper {
+        width: 100%;
+        position: relative;
       }
 
       figure {
         position: relative;
         display: inline-block;
         margin: 0;
-        margin-right: 5%;
+        width: 19%;
+        padding-right: 5%;
+
+        &.egg-f-row {
+
+          &.f {
+            figcaption {
+              top: 63%;
+              left: 10px;
+            }
+
+            [rel=img] {
+              left: -2%;
+              width: 207%;
+            }
+
+          }
+
+          &.s {
+            figcaption {
+              top: 63%;
+              left: 22px;
+            }
+
+            [rel=img] {
+              left: -6%;
+              width: 87%;
+            }
+          }
+
+          &.t {
+            figcaption {
+              left: 15px;
+              top: 60%;
+            }
+
+            [rel=img] {
+              left: -50.4%;
+              width: 185%;
+            }
+          }
+
+          &.fo {
+            figcaption {
+              top: 63%;
+              left: 27px;
+            }
+
+            [rel=img] {
+              left: 0;
+            }
+          }
+        }
+
+        &.egg-s-row {
+
+          figcaption {
+            top: 65%;
+          }
+
+          &.f {
+            figcaption {
+              left: 11px;
+            }
+
+            [rel=img] {
+              width: 79%;
+            }
+          }
+
+          &.s {
+            figcaption {
+              left: 10px;
+              font-size: 0.87em;
+            }
+
+            [rel=img] {
+              left: -2%;
+              width: 84%;
+            }
+          }
+
+          &.t {
+            figcaption {
+              left: 65px;
+              top: 68%;
+            }
+
+            [rel=img] {
+              width: 79%;
+            }
+          }
+
+          &.fo {
+            figcaption {
+              top: 61%;
+              left: 22px;
+            }
+
+            [rel=img] {
+              left: -7%;
+              width: 117%;
+            }
+          }
+
+        }
 
         figcaption {
           position: absolute;
@@ -847,6 +957,7 @@ p {
 
         &:nth-child(4n) {
           margin-right: 0;
+          padding-right: 0;
         }
 
         &.egg-f-row {
@@ -1034,7 +1145,7 @@ p {
 
             [rel=img] {
               left: -3px;
-              width: 221%;
+
             }
 
           }
@@ -1298,7 +1409,7 @@ p {
   #slide_pmarketing {
     .wrapper {
       figure {
-        max-width: 115px;
+//        max-width: 115px;
 
         img {
           width: 100%;
@@ -1319,7 +1430,7 @@ p {
 
             [rel=img] {
               left: -3px;
-              width: 302px;
+//              width: 302px;
             }
 
           }
