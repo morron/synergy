@@ -1,5 +1,4 @@
 OnResizeCalled = () ->
-  console.log 1
   wHeight = window.innerHeight;
   wWidth = innerHeight/3*4;
   $('.slide article').css(

@@ -3,7 +3,6 @@ void function () {
   var OnResizeCalled;
   OnResizeCalled = function () {
     var wHeight, wWidth;
-    console.log(1);
     wHeight = window.innerHeight;
     wWidth = innerHeight / 3 * 4;
     return $('.slide article').css({
