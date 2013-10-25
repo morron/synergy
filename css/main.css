@@ -45,6 +45,7 @@ p {
   background-color: #f5f5f4;
   background-repeat: no-repeat;
   text-align: center;
+  z-index: 100000;
 }
 .wrap {
   min-width: 1000px;
@@ -84,6 +85,50 @@ p {
   bottom: 0;
   width: auto;
   height: auto;
+}
+.wrapper .top-menu-block {
+  border: 1px solid #fff;
+  border-top: none;
+  background: transparent;
+  padding: 10px 10px 5px;
+  position: absolute;
+  font-size: 0.13em;
+  text-transform: none;
+  z-index: 7;
+  width: 34em;
+  left: 50%;
+  margin-left: -18em;
+  text-align: center;
+  color: #fff;
+}
+.wrapper .top-menu-block .linkedin {
+  float: left;
+}
+.wrapper .top-menu-block .logo {
+  text-align: center;
+  font-size: 1.1em;
+}
+.wrapper .top-menu-block .mailme {
+  background: url(../img/icon-mailme.png) no-repeat transparent;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  float: right;
+}
+.wrapper .top-menu-block .phoneme {
+  background: url(../img/icon-phoneme.png) no-repeat transparent;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-left: 5px;
+}
+.wrapper .top-menu-block a {
+  color: #fff;
+  text-decoration: none;
+}
+.wrapper .top-menu-block a.hover {
+  text-decoration: underline;
 }
 .wrapper .content {
   width: 100%;
@@ -239,7 +284,7 @@ p {
   color: #c9c9c9;
   padding: 5px;
   display: block;
-  margin: 0.2em 0;
+  margin: 0.3em 0;
 }
 #slide_contacts .wrapper .content fieldset .submit-block {
   position: relative;
@@ -409,6 +454,7 @@ p {
   background: url(../img/clock-shadow.png) no-repeat center #eeeeee;
   width: 100%;
   height: 100%;
+  background-size: cover;
 }
 #slide_worth .wrapper .content .slide-link {
   position: absolute;
@@ -589,10 +635,17 @@ p {
   text-transform: uppercase;
   position: absolute;
 }
+#slide_marketing .wrapper img.marketing-title {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  width: 90%;
+  z-index: 5;
+}
 #slide_marketing .wrapper img.marketing {
   position: absolute;
   left: -14px;
-  top: -11px;
+  top: -13px;
 }
 #slide_marketing .button {
   top: auto;
@@ -616,6 +669,7 @@ p {
 }
 #slide_pmarketing .wrapper .content {
   background: url(../img/bg-pmarketing.png) repeat 0 0 #808080;
+  background-size: cover;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -632,13 +686,81 @@ p {
 }
 #slide_pmarketing .wrapper .content div.egg-block {
   margin: 0 10%;
+  width: 80%;
+}
+#slide_pmarketing .wrapper .content div.egg-block-wrapper {
   width: 100%;
+  position: relative;
 }
 #slide_pmarketing .wrapper .content figure {
   position: relative;
   display: inline-block;
   margin: 0;
-  margin-right: 5%;
+  width: 19%;
+  padding-right: 5%;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.f figcaption {
+  top: 63%;
+  left: 10px;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.f [rel=img] {
+  left: -2%;
+  width: 207%;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.s figcaption {
+  top: 63%;
+  left: 22px;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.s [rel=img] {
+  left: -6%;
+  width: 87%;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.t figcaption {
+  left: 15px;
+  top: 60%;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.t [rel=img] {
+  left: -50.4%;
+  width: 185%;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.fo figcaption {
+  top: 63%;
+  left: 27px;
+}
+#slide_pmarketing .wrapper .content figure.egg-f-row.fo [rel=img] {
+  left: 0;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row figcaption {
+  top: 65%;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.f figcaption {
+  left: 11px;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.f [rel=img] {
+  width: 79%;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.s figcaption {
+  left: 10px;
+  font-size: 0.87em;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.s [rel=img] {
+  left: -2%;
+  width: 84%;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.t figcaption {
+  left: 65px;
+  top: 68%;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.t [rel=img] {
+  width: 79%;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.fo figcaption {
+  top: 61%;
+  left: 22px;
+}
+#slide_pmarketing .wrapper .content figure.egg-s-row.fo [rel=img] {
+  left: -7%;
+  width: 117%;
 }
 #slide_pmarketing .wrapper .content figure figcaption {
   position: absolute;
@@ -652,6 +774,7 @@ p {
 }
 #slide_pmarketing .wrapper .content figure:nth-child(4n) {
   margin-right: 0;
+  padding-right: 0;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row {
   z-index: 5;
@@ -684,8 +807,10 @@ p {
     margin: 0 auto;
     width: 100%;
     height: 100%;
+    min-height: 600px;
+    min-width: 800px;
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
   }
 }
@@ -694,7 +819,6 @@ p {
     width: 1280px;
     height: 960px;
     margin-left: -640px;
-    margin-top: -480px;
   }
   .text-block h1 {
     font-size: 1.6em;
@@ -730,6 +854,90 @@ p {
     width: 80%;
     margin-left: -502px;
   }
+  #slide_geography .wrapper .content h1 {
+    top: 9px;
+    left: 2px;
+  }
+  #slide_worth .wrapper .content .slide-link {
+    font-size: 0.7em;
+  }
+  #slide_contacts .wrapper .content h1 {
+    font-size: 1.3em;
+  }
+  #slide_contacts .wrapper .content p {
+    font-size: 0.59em;
+  }
+  #slide_pmarketing .wrapper figure {
+    min-width: 200px;
+  }
+  #slide_pmarketing .wrapper figure img {
+    width: 170px;
+  }
+  #slide_pmarketing .wrapper figure [rel=img] {
+    width: 85%;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.f figcaption {
+    top: 63%;
+    left: 10px;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.f [rel=img] {
+    left: -3px;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.s figcaption {
+    top: 63%;
+    left: 22px;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.s [rel=img] {
+    left: -13px;
+    width: 94%;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.t figcaption {
+    left: 15px;
+    top: 60%;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.t [rel=img] {
+    left: -110px;
+    width: 200%;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.fo figcaption {
+    top: 63%;
+    left: 27px;
+  }
+  #slide_pmarketing .wrapper figure.egg-f-row.fo [rel=img] {
+    left: 0;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row figcaption {
+    top: 65%;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.f figcaption {
+    left: 11px;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.f [rel=img] {
+    width: 85%;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.s figcaption {
+    left: 10px;
+    font-size: 0.87em;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.s [rel=img] {
+    left: -3px;
+    width: 90%;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.t figcaption {
+    left: 65px;
+    top: 68%;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.t [rel=img] {
+    width: 85%;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.fo figcaption {
+    top: 61%;
+    left: 22px;
+  }
+  #slide_pmarketing .wrapper figure.egg-s-row.fo [rel=img] {
+    left: -13px;
+    width: 100%;
+  }
 }
 @media (min-height: 768px) and (max-height: 960px) {
   .slide article {
@@ -737,7 +945,6 @@ p {
     height: 768px;
     font-size: 76.92307692307692px;
     margin-left: -512px;
-    margin-top: -384px;
   }
   #slide_contacts .text-block p {
     font-size: 0.7em;
@@ -802,60 +1009,6 @@ p {
   #slide_worth .content {
     font-size: 0.8em;
   }
-  #slide_budda p {
-    font-size: 0.26em;
-  }
-  #slide_budda p.l-1 {
-    top: 250px;
-    left: 180px;
-  }
-  #slide_budda p.l-2 {
-    top: 400px;
-    left: 100px;
-  }
-  #slide_budda p.l-3 {
-    top: 600px;
-    left: 140px;
-  }
-  #slide_budda p.r-1 {
-    top: 250px;
-    right: 185px;
-  }
-  #slide_budda p.r-2 {
-    top: 385px;
-    right: 90px;
-  }
-  #slide_budda p.r-3 {
-    top: 595px;
-    right: 120px;
-  }
-  #slide_budda img.p-line {
-    position: absolute;
-  }
-  #slide_budda img.p-line.l-1 {
-    top: 255px;
-    left: 275px;
-  }
-  #slide_budda img.p-line.l-2 {
-    top: 414px;
-    left: 205px;
-  }
-  #slide_budda img.p-line.l-3 {
-    top: 540px;
-    left: 245px;
-  }
-  #slide_budda img.p-line.r-1 {
-    top: 255px;
-    right: 295px;
-  }
-  #slide_budda img.p-line.r-2 {
-    top: 414px;
-    right: 225px;
-  }
-  #slide_budda img.p-line.r-3 {
-    top: 545px;
-    right: 250px;
-  }
   p {
     font-size: 0.5em;
   }
@@ -872,13 +1025,9 @@ p {
     width: 800px;
     font-size: 62.5px;
     margin-left: -400px;
-    margin-top: -300px;
   }
   #slide_agency .link_block {
     line-height: 500px;
-  }
-  #slide_pmarketing .wrapper figure {
-    max-width: 115px;
   }
   #slide_pmarketing .wrapper figure img {
     width: 100%;
@@ -892,7 +1041,6 @@ p {
   }
   #slide_pmarketing .wrapper figure.egg-f-row.f [rel=img] {
     left: -3px;
-    width: 302px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.s figcaption {
     top: 63%;
@@ -949,8 +1097,9 @@ p {
   }
   #slide_marketing .wrapper img.marketing {
     width: 100%;
-    left: -7px;
-    top: -8px;
+    /*left: -7px;
+          top: -8px;*/
+  
   }
   #slide_marketing .wrapper .content h1 {
     font-size: 1.44em;
@@ -959,63 +1108,8 @@ p {
     width: 80%;
     margin-left: -305px;
   }
-  #slide_worth .content {
+  #slide_worth .content .inner {
     font-size: 0.7em;
-  }
-  #slide_budda p {
-    font-size: 0.26em;
-  }
-  #slide_budda p.l-1 {
-    top: 250px;
-    left: 180px;
-  }
-  #slide_budda p.l-2 {
-    top: 400px;
-    left: 100px;
-  }
-  #slide_budda p.l-3 {
-    top: 600px;
-    left: 140px;
-  }
-  #slide_budda p.r-1 {
-    top: 250px;
-    right: 185px;
-  }
-  #slide_budda p.r-2 {
-    top: 385px;
-    right: 90px;
-  }
-  #slide_budda p.r-3 {
-    top: 595px;
-    right: 120px;
-  }
-  #slide_budda img.p-line {
-    width: 10%;
-    position: absolute;
-  }
-  #slide_budda img.p-line.l-1 {
-    top: 255px;
-    left: 275px;
-  }
-  #slide_budda img.p-line.l-2 {
-    top: 414px;
-    left: 205px;
-  }
-  #slide_budda img.p-line.l-3 {
-    top: 540px;
-    left: 245px;
-  }
-  #slide_budda img.p-line.r-1 {
-    top: 255px;
-    right: 295px;
-  }
-  #slide_budda img.p-line.r-2 {
-    top: 414px;
-    right: 225px;
-  }
-  #slide_budda img.p-line.r-3 {
-    top: 545px;
-    right: 250px;
   }
   h1 {
     font-size: 1.3em;

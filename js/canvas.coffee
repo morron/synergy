@@ -1,11 +1,19 @@
 OnResizeCalled = () ->
-  gameWidth = $('#index-triangle').parent().innerWidth()
-  gameHeight = $('#index-triangle').parent().innerHeight()
+  gameWidth = parseFloat($('#index-triangle').parents('article').css('width'))#innerWidth()
+  gameHeight = parseFloat($('#index-triangle').parents('article').css('height'))#.innerHeight()
 
-  scaleToFitX = gameWidth / 1000
-  scaleToFitY = gameHeight / 700
+  gameWidth = gameWidth - parseFloat($('#index-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingRight'))
+  gameHeight = gameHeight - parseFloat($('#index-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingBottom'))
+
+  scaleToFitX = gameWidth / 1024
+  scaleToFitY = gameHeight / 768
 
   optimalRatio = Math.min scaleToFitX, scaleToFitY
+
+  console.log gameWidth
+  console.log gameHeight
+
+  console.log optimalRatio
 
   stage.setScale(optimalRatio)
 
@@ -23,18 +31,29 @@ triangleRedraw = () ->
 
 window.addEventListener("resize", OnResizeCalled, false)
 
-gameWidth = $('#index-triangle').parent().innerWidth()
-gameHeight = $('#index-triangle').parent().innerHeight()
+wHeight = window.innerHeight;
+wWidth = innerHeight/3*4;
+$('.slide article').css(
+  width: wWidth
+  height: wHeight
+  marginLeft: (wWidth/2)*(-1)
+)
 
-scaleToFitX = gameWidth / 1000
-scaleToFitY = gameHeight / 700
+gameWidth = parseFloat($('#index-triangle').parents('article').css('width'))#innerWidth()
+gameHeight = parseFloat($('#index-triangle').parents('article').css('height'))#.innerHeight()
+
+gameWidth = gameWidth - parseFloat($('#index-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingRight'))
+gameHeight = gameHeight - parseFloat($('#index-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingBottom'))
+
+scaleToFitX = gameWidth / 1024
+scaleToFitY = gameHeight / 768
 
 optimalRatio = Math.min scaleToFitX, scaleToFitY
 
 stage = new Kinetic.Stage
   container: 'index-triangle'
-  width: $('#index-triangle').parent().innerWidth()
-  height: $('#index-triangle').parent().innerHeight()
+  width: 1024 #$('#index-triangle').parent().innerWidth()
+  height: 768 #$('#index-triangle').parent().innerHeight()
   scale: optimalRatio
 
 layer = new Kinetic.Layer()
