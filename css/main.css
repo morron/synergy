@@ -241,6 +241,19 @@ p {
   display: block;
   margin: 0.2em 0;
 }
+#slide_contacts .wrapper .content fieldset .submit-block {
+  position: relative;
+}
+#slide_contacts .wrapper .content fieldset .submit-block button {
+  background: url("../img/send-button.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: 0 none;
+  height: 100%;
+  position: absolute;
+  right: 3.8%;
+  top: 0;
+  width: 13%;
+  cursor: pointer;
+}
 #slide_contacts .wrapper .content fieldset textarea {
   width: 55em;
   height: 14em;
