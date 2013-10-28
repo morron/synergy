@@ -2,15 +2,16 @@
 void function () {
   var $parent, gameHeight, gameWidth, layer, OnResizeCalled, optimalRatio, scaleToFitX, scaleToFitY, stage, triangleBottom, triangleLeft, triangleMouseout, triangleMouseover, triangleRedraw, triangleRight, triangleTop;
   OnResizeCalled = function () {
-    var gameHeight, gameWidth, optimalRatio, scaleToFitX, scaleToFitY;
-    gameWidth = $('#clock-triangle').parent().innerWidth();
-    gameHeight = $('#clock-triangle').parent().innerHeight();
-    scaleToFitX = gameWidth / 1e3;
-    scaleToFitY = gameHeight / 700;
-    optimalRatio = Math.min(scaleToFitX, scaleToFitY);
-    stage.setScale(optimalRatio);
+    var gameHeight, gameWidth;
+    gameWidth = parseFloat($('#clock-triangle').parents('article').css('width'));
+    gameHeight = parseFloat($('#clock-triangle').parents('article').css('height'));
+    gameWidth = gameWidth - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingRight'));
+    gameHeight = gameHeight - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingBottom'));
+    stage.setWidth(gameWidth);
+    stage.setHeight(gameHeight);
     return triangleRedraw();
   };
+  $parent = $('#slide_worth');
   triangleRedraw = function () {
     layer.clear();
     triangleLeft.setPoints([
@@ -48,7 +49,6 @@ void function () {
     return layer.draw();
   };
   window.addEventListener('resize', OnResizeCalled, false);
-  $parent = $('#slide_worth');
   gameWidth = $('#clock-triangle').parent().innerWidth();
   gameHeight = $('#clock-triangle').parent().innerHeight();
   scaleToFitX = gameWidth / 1e3;

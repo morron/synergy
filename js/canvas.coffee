@@ -1,13 +1,21 @@
 OnResizeCalled = () ->
-  gameWidth = $('#index-triangle').parent().innerWidth()
-  gameHeight = $('#index-triangle').parent().innerHeight()
+  gameWidth = parseFloat($('#index-triangle').parents('article').css('width'))#innerWidth()
+  gameHeight = parseFloat($('#index-triangle').parents('article').css('height'))#.innerHeight()
 
-  scaleToFitX = gameWidth / 1000
-  scaleToFitY = gameHeight / 700
+  gameWidth = gameWidth - parseFloat($('#index-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingRight'))
+  gameHeight = gameHeight - parseFloat($('#index-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingBottom'))
 
-  optimalRatio = Math.min scaleToFitX, scaleToFitY
+#  scaleToFitX = gameWidth / 1024
+#  scaleToFitY = gameHeight / 768
+#
+#  optimalRatio = Math.min scaleToFitX, scaleToFitY
 
-  stage.setScale(optimalRatio)
+#  console.log gameWidth
+#  console.log gameHeight
+
+#  stage.setScale(optimalRatio)
+  stage.setWidth(gameWidth)
+  stage.setHeight(gameHeight)
 
   triangleRedraw()
 
@@ -23,11 +31,22 @@ triangleRedraw = () ->
 
 window.addEventListener("resize", OnResizeCalled, false)
 
-gameWidth = $('#index-triangle').parent().innerWidth()
-gameHeight = $('#index-triangle').parent().innerHeight()
+wHeight = window.innerHeight;
+wWidth = innerHeight/3*4;
+$('.slide article').css(
+  width: wWidth
+  height: wHeight
+  marginLeft: (wWidth/2)*(-1)
+)
 
-scaleToFitX = gameWidth / 1000
-scaleToFitY = gameHeight / 700
+gameWidth = parseFloat($('#index-triangle').parents('article').css('width'))#innerWidth()
+gameHeight = parseFloat($('#index-triangle').parents('article').css('height'))#.innerHeight()
+
+gameWidth = gameWidth - parseFloat($('#index-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingRight'))
+gameHeight = gameHeight - parseFloat($('#index-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingBottom'))
+
+scaleToFitX = gameWidth / 1024
+scaleToFitY = gameHeight / 768
 
 optimalRatio = Math.min scaleToFitX, scaleToFitY
 

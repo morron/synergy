@@ -1,4 +1,16 @@
+OnResizeCalled = () ->
+  wHeight = window.innerHeight;
+  wWidth = innerHeight/3*4;
+  $('.slide article').css(
+    width: wWidth
+    height: wHeight
+    marginLeft: (wWidth/2)*(-1)
+  )
+
+window.addEventListener("resize", OnResizeCalled, false)
+
 jQuery ->
+  OnResizeCalled();
   $('#splashImg').splashScreen
     textLayers: [
       'img/splash-0.png'
@@ -8,15 +20,17 @@ jQuery ->
       'img/splash-4.png'
     ]
 
-  $('#slide_pmarketing figure').on 'mouseover', ->
-    $(this).find('img').not('[rel=img]').stop().fadeTo 'slow', 0
+  $('#slide_pmarketing figure').on 'mouseover', (e) ->
+    $(this).find('[rel=img]').stop(true, true).fadeTo 'fast', 1
     $(this).find('figcaption').hide()
-    $(this).find('[rel=img]').stop().fadeTo 'slow', 1
+#    $(this).parents('figure').find('img').not('[rel=img]').fadeTo 'fast', 0
+    e.preventDefault()
 
-  $('#slide_pmarketing figure').on 'mouseout', ->
-    $(this).find('[rel=img]').stop().fadeTo 'fast', 0
-    $(this).find('img').not('[rel=img]').stop().fadeTo 'fast', 1
+  $('#slide_pmarketing figure').on 'mouseout', (e) ->
+    $(this).find('[rel=img]').fadeTo 'fast', 0
+#    $(this).find('img').not('[rel=img]').stop(true,true).fadeTo 'fast', 1
     $(this).find('figcaption').show()
+    e.preventDefault()
 
 
   ###$('#slide_worth .slide-link span').on 'click', ->

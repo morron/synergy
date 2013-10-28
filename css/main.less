@@ -162,10 +162,12 @@ p {
       padding: 5% 8%;
 
       h1 {
-        text-decoration: underline;
+        text-decoration: none;
         text-transform: uppercase;
         margin-bottom: 55px;
         font-weight: bold;
+        display: inline-block;
+        border-bottom: 3px solid white;
       }
     }
   }
@@ -350,9 +352,28 @@ p {
           margin: 0.3em 0;
         }
 
+        .submit-block {
+          position: relative;
+          display: inline-block;
+          margin: 0 0;
+          button {
+            background: url("../img/send-button.png") no-repeat scroll 0 0 #FFFFFF;
+            background-size: cover;
+            border: 0 none;
+            cursor: pointer;
+            height: 100%;
+            padding: 0;
+            position: absolute;
+            right: -12%;
+            top: 0;
+            width: 13%;
+          }
+        }
+
         textarea {
           width: 55em;
           height: 14em;
+          margin: 0;
         }
 
         input {
@@ -764,10 +785,18 @@ p {
       }
     }
 
+    img.marketing-title {
+      position: absolute;
+      left: 0;
+      top: -12px;
+      width: 90%;
+      z-index: 5;
+    }
+
     img.marketing {
       position: absolute;
       left: -14px;
-      top: -11px;
+      top: -13px;
     }
   }
 
@@ -815,18 +844,121 @@ p {
 
       div.egg-block {
         margin: 0 10%;
+        width: 80%;
+      }
+
+      div.egg-block-wrapper {
         width: 100%;
+        position: relative;
       }
 
       figure {
         position: relative;
         display: inline-block;
         margin: 0;
+        width: 19%;
         margin-right: 5%;
+
+        &.egg-f-row {
+
+          &.f {
+            figcaption {
+              top: 63%;
+            }
+
+            [rel=img] {
+              left: -2%;
+              width: 260%;
+            }
+
+          }
+
+          &.s {
+            figcaption {
+              top: 63%;
+            }
+
+            [rel=img] {
+              left: -8%;
+              width: 110%;
+            }
+          }
+
+          &.t {
+            figcaption {
+              top: 60%;
+            }
+
+            [rel=img] {
+              left: -65.4%;
+              width: 236%;
+            }
+          }
+
+          &.fo {
+            figcaption {
+              top: 63%;
+            }
+
+            [rel=img] {
+              left: 0;
+            }
+          }
+        }
+
+        &.egg-s-row {
+
+          figcaption {
+            top: 65%;
+          }
+
+          &.f {
+            figcaption {
+            }
+
+            [rel=img] {
+              width: 100%;
+            }
+          }
+
+          &.s {
+            figcaption {
+              font-size: 0.87em;
+            }
+
+            [rel=img] {
+              left: -2%;
+              width: 106%;
+            }
+          }
+
+          &.t {
+            figcaption {
+              top: 68%;
+            }
+
+            [rel=img] {
+              width: 100%;
+            }
+          }
+
+          &.fo {
+            figcaption {
+              top: 61%;
+            }
+
+            [rel=img] {
+              left: -8%;
+              width: 117%;
+            }
+          }
+
+        }
 
         figcaption {
           position: absolute;
           width: 100%;
+          text-align: center;
         }
 
 
@@ -839,13 +971,11 @@ p {
 
         &:nth-child(4n) {
           margin-right: 0;
+          padding-right: 0;
         }
 
         &.egg-f-row {
           z-index: 5;
-
-
-
         }
 
         &.egg-s-row {
@@ -858,7 +988,6 @@ p {
       p {
         color: #242424;
         text-transform: uppercase;
-        position: absolute;
         z-index: 10;
         font-size: 0.29em;
         text-align: center;
@@ -892,8 +1021,11 @@ p {
     width: 100%;
     height: 100%;
 
+    min-height: 600px;
+    min-width: 800px;
+
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 50%;
   }
 }
@@ -905,7 +1037,7 @@ p {
     height: 960px;
 
     margin-left: -640px;
-    margin-top: -480px;
+//    margin-top: -480px;
   }
 
   .text-block {
@@ -1026,7 +1158,7 @@ p {
 
             [rel=img] {
               left: -3px;
-              width: 221%;
+
             }
 
           }
@@ -1134,7 +1266,7 @@ p {
     font-size: @size/1.3;
 
     margin-left: -512px;
-    margin-top: -384px;
+//    margin-top: -384px;
   }
 
   #slide_contacts {
@@ -1155,7 +1287,6 @@ p {
           &.f {
             figcaption {
               top: 63%;
-              left: 16px;
             }
 
             [rel=img] {
@@ -1167,7 +1298,6 @@ p {
           &.s {
             figcaption {
               top: 63%;
-              left: 26px;
             }
 
             [rel=img] {
@@ -1177,7 +1307,6 @@ p {
 
           &.t {
             figcaption {
-              left: 18px;
               top: 60%;
             }
 
@@ -1189,7 +1318,6 @@ p {
           &.fo {
             figcaption {
               top: 63%;
-              left: 27px;
             }
 
             [rel=img] {
@@ -1206,14 +1334,12 @@ p {
 
           &.f {
             figcaption {
-              left: 16px;
             }
 
           }
 
           &.s {
             figcaption {
-              left: 8px;
             }
 
             [rel=img] {
@@ -1223,7 +1349,6 @@ p {
 
           &.t {
             figcaption {
-              left: 58px;
               top: 68%;
             }
 
@@ -1232,7 +1357,6 @@ p {
           &.fo {
             figcaption {
               top: 62%;
-              left: 25px;
             }
 
             [rel=img] {
@@ -1280,7 +1404,7 @@ p {
     font-size: @size/1.6;
 
     margin-left: -400px;
-    margin-top: -300px;
+//    margin-top: -300px;
   }
 
   #slide_agency .link_block {
@@ -1290,7 +1414,7 @@ p {
   #slide_pmarketing {
     .wrapper {
       figure {
-        max-width: 115px;
+//        max-width: 115px;
 
         img {
           width: 100%;
@@ -1305,13 +1429,12 @@ p {
           &.f {
             figcaption {
               top: 63%;
-              left: 11px;
             }
 
 
             [rel=img] {
               left: -3px;
-              width: 302px;
+//              width: 302px;
             }
 
           }
@@ -1319,7 +1442,6 @@ p {
           &.s {
             figcaption {
               top: 63%;
-              left: 18px;
             }
 
             [rel=img] {
@@ -1330,7 +1452,6 @@ p {
 
           &.t {
             figcaption {
-              left: 17px;
               top: 60%;
             }
 
@@ -1343,7 +1464,6 @@ p {
           &.fo {
             figcaption {
               top: 63%;
-              left: 21px;
             }
 
             [rel=img] {
@@ -1365,7 +1485,6 @@ p {
 
           &.f {
             figcaption {
-              left: 12px;
             }
 
             [rel=img] {
@@ -1376,7 +1495,6 @@ p {
 
           &.s {
             figcaption {
-              left: 9px;
               font-size: 0.9em;
             }
 
@@ -1388,7 +1506,6 @@ p {
 
           &.t {
             figcaption {
-              left: 43px;
               top: 68%;
             }
 
@@ -1397,7 +1514,6 @@ p {
           &.fo {
             figcaption {
               top: 62%;
-              left: 18px;
             }
 
             [rel=img] {
@@ -1415,8 +1531,8 @@ p {
     .wrapper {
       img.marketing {
         width: 100%;
-        left: -7px;
-        top: -8px;
+        /*left: -7px;
+        top: -8px;*/
       }
       .content {
         h1 {

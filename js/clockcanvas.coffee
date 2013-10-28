@@ -1,15 +1,23 @@
 OnResizeCalled = () ->
-  gameWidth = $('#clock-triangle').parent().innerWidth()
-  gameHeight = $('#clock-triangle').parent().innerHeight()
+  gameWidth = parseFloat($('#clock-triangle').parents('article').css('width'))#innerWidth()
+  gameHeight = parseFloat($('#clock-triangle').parents('article').css('height'))#.innerHeight()
 
-  scaleToFitX = gameWidth / 1000
-  scaleToFitY = gameHeight / 700
+  gameWidth = gameWidth - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingRight'))
+  gameHeight = gameHeight - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingBottom'))
 
-  optimalRatio = Math.min scaleToFitX, scaleToFitY
+#  scaleToFitX = gameWidth / 1024
+#  scaleToFitY = gameHeight / 768
+#
+#  optimalRatio = Math.min scaleToFitX, scaleToFitY
+#
+#  stage.setScale(optimalRatio)
 
-  stage.setScale(optimalRatio)
+  stage.setWidth(gameWidth)
+  stage.setHeight(gameHeight)
 
   triangleRedraw()
+
+$parent = $ '#slide_worth'
 
 triangleRedraw = () ->
   layer.clear()
@@ -20,8 +28,6 @@ triangleRedraw = () ->
   layer.draw()
 
 window.addEventListener("resize", OnResizeCalled, false)
-
-$parent = $ '#slide_worth'
 
 gameWidth = $('#clock-triangle').parent().innerWidth()
 gameHeight = $('#clock-triangle').parent().innerHeight()
