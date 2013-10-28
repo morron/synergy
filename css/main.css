@@ -291,10 +291,11 @@ p {
 #slide_contacts .wrapper .content fieldset .submit-block {
   position: relative;
   display: inline-block;
-  margin: 0.3em 0;
+  margin: 0 0;
 }
 #slide_contacts .wrapper .content fieldset .submit-block button {
   background: url("../img/send-button.png") no-repeat scroll 0 0 #ffffff;
+  background-size: cover;
   border: 0 none;
   cursor: pointer;
   height: 100%;
