@@ -2,18 +2,13 @@
 void function () {
   var $parent, gameHeight, gameWidth, layer, OnResizeCalled, optimalRatio, scaleToFitX, scaleToFitY, stage, triangleBottom, triangleLeft, triangleMouseout, triangleMouseover, triangleRedraw, triangleRight, triangleTop, wHeight, wWidth;
   OnResizeCalled = function () {
-    var gameHeight, gameWidth, optimalRatio, scaleToFitX, scaleToFitY;
+    var gameHeight, gameWidth;
     gameWidth = parseFloat($('#index-triangle').parents('article').css('width'));
     gameHeight = parseFloat($('#index-triangle').parents('article').css('height'));
     gameWidth = gameWidth - parseFloat($('#index-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingRight'));
     gameHeight = gameHeight - parseFloat($('#index-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#index-triangle').parents('.wrapper').css('paddingBottom'));
-    scaleToFitX = gameWidth / 1024;
-    scaleToFitY = gameHeight / 768;
-    optimalRatio = Math.min(scaleToFitX, scaleToFitY);
-    console.log(gameWidth);
-    console.log(gameHeight);
-    console.log(optimalRatio);
-    stage.setScale(optimalRatio);
+    stage.setWidth(gameWidth);
+    stage.setHeight(gameHeight);
     return triangleRedraw();
   };
   $parent = $('#slide_index');
@@ -70,8 +65,8 @@ void function () {
   optimalRatio = Math.min(scaleToFitX, scaleToFitY);
   stage = new Kinetic.Stage({
     container: 'index-triangle',
-    width: 1024,
-    height: 768,
+    width: $('#index-triangle').parent().innerWidth(),
+    height: $('#index-triangle').parent().innerHeight(),
     scale: optimalRatio
   });
   layer = new Kinetic.Layer;

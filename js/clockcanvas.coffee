@@ -5,13 +5,15 @@ OnResizeCalled = () ->
   gameWidth = gameWidth - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingLeft')) - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingRight'))
   gameHeight = gameHeight - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingTop')) - parseFloat($('#clock-triangle').parents('.wrapper').css('paddingBottom'))
 
+#  scaleToFitX = gameWidth / 1024
+#  scaleToFitY = gameHeight / 768
+#
+#  optimalRatio = Math.min scaleToFitX, scaleToFitY
+#
+#  stage.setScale(optimalRatio)
 
-  scaleToFitX = gameWidth / 1024
-  scaleToFitY = gameHeight / 768
-
-  optimalRatio = Math.min scaleToFitX, scaleToFitY
-
-  stage.setScale(optimalRatio)
+  stage.setWidth(gameWidth)
+  stage.setHeight(gameHeight)
 
   triangleRedraw()
 
