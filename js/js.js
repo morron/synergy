@@ -23,15 +23,15 @@ void function () {
         'img/splash-4.png'
       ]
     });
-    $('#slide_pmarketing figure').on('mouseover', function () {
-      $(this).find('img').not('[rel=img]').stop().fadeTo('slow', 0);
+    $('#slide_pmarketing figure').on('mouseover', function (e) {
+      $(this).find('[rel=img]').stop(true, true).fadeTo('fast', 1);
       $(this).find('figcaption').hide();
-      return $(this).find('[rel=img]').stop().fadeTo('slow', 1);
+      return e.preventDefault();
     });
-    return $('#slide_pmarketing figure').on('mouseout', function () {
-      $(this).find('[rel=img]').stop().fadeTo('fast', 0);
-      $(this).find('img').not('[rel=img]').stop().fadeTo('fast', 1);
-      return $(this).find('figcaption').show();
+    return $('#slide_pmarketing figure').on('mouseout', function (e) {
+      $(this).find('[rel=img]').fadeTo('fast', 0);
+      $(this).find('figcaption').show();
+      return e.preventDefault();
     });
   });
 }.call(this);

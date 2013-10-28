@@ -20,15 +20,17 @@ jQuery ->
       'img/splash-4.png'
     ]
 
-  $('#slide_pmarketing figure').on 'mouseover', ->
-    $(this).find('img').not('[rel=img]').stop().fadeTo 'slow', 0
+  $('#slide_pmarketing figure').on 'mouseover', (e) ->
+    $(this).find('[rel=img]').stop(true, true).fadeTo 'fast', 1
     $(this).find('figcaption').hide()
-    $(this).find('[rel=img]').stop().fadeTo 'slow', 1
+#    $(this).parents('figure').find('img').not('[rel=img]').fadeTo 'fast', 0
+    e.preventDefault()
 
-  $('#slide_pmarketing figure').on 'mouseout', ->
-    $(this).find('[rel=img]').stop().fadeTo 'fast', 0
-    $(this).find('img').not('[rel=img]').stop().fadeTo 'fast', 1
+  $('#slide_pmarketing figure').on 'mouseout', (e) ->
+    $(this).find('[rel=img]').fadeTo 'fast', 0
+#    $(this).find('img').not('[rel=img]').stop(true,true).fadeTo 'fast', 1
     $(this).find('figcaption').show()
+    e.preventDefault()
 
 
   ###$('#slide_worth .slide-link span').on 'click', ->
