@@ -701,35 +701,31 @@ p {
   display: inline-block;
   margin: 0;
   width: 19%;
-  padding-right: 5%;
+  margin-right: 5%;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.f figcaption {
   top: 63%;
-  left: 10px;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.f [rel=img] {
   left: -2%;
-  width: 207%;
+  width: 270%;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.s figcaption {
   top: 63%;
-  left: 22px;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.s [rel=img] {
-  left: -6%;
-  width: 87%;
+  left: -7%;
+  width: 110%;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.t figcaption {
-  left: 15px;
   top: 60%;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.t [rel=img] {
-  left: -50.4%;
-  width: 185%;
+  left: -65.4%;
+  width: 236%;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.fo figcaption {
   top: 63%;
-  left: 27px;
 }
 #slide_pmarketing .wrapper .content figure.egg-f-row.fo [rel=img] {
   left: 0;
@@ -737,30 +733,24 @@ p {
 #slide_pmarketing .wrapper .content figure.egg-s-row figcaption {
   top: 65%;
 }
-#slide_pmarketing .wrapper .content figure.egg-s-row.f figcaption {
-  left: 11px;
-}
 #slide_pmarketing .wrapper .content figure.egg-s-row.f [rel=img] {
-  width: 79%;
+  width: 100%;
 }
 #slide_pmarketing .wrapper .content figure.egg-s-row.s figcaption {
-  left: 10px;
   font-size: 0.87em;
 }
 #slide_pmarketing .wrapper .content figure.egg-s-row.s [rel=img] {
-  left: -2%;
-  width: 84%;
+  left: -1%;
+  width: 106%;
 }
 #slide_pmarketing .wrapper .content figure.egg-s-row.t figcaption {
-  left: 65px;
   top: 68%;
 }
 #slide_pmarketing .wrapper .content figure.egg-s-row.t [rel=img] {
-  width: 79%;
+  width: 100%;
 }
 #slide_pmarketing .wrapper .content figure.egg-s-row.fo figcaption {
   top: 61%;
-  left: 22px;
 }
 #slide_pmarketing .wrapper .content figure.egg-s-row.fo [rel=img] {
   left: -7%;
@@ -769,6 +759,7 @@ p {
 #slide_pmarketing .wrapper .content figure figcaption {
   position: absolute;
   width: 100%;
+  text-align: center;
 }
 #slide_pmarketing .wrapper .content figure [rel='img'] {
   opacity: 0;
@@ -790,7 +781,6 @@ p {
 #slide_pmarketing .wrapper .content p {
   color: #242424;
   text-transform: uppercase;
-  position: absolute;
   z-index: 10;
   font-size: 0.29em;
   text-align: center;
@@ -958,20 +948,17 @@ p {
   }
   #slide_pmarketing .wrapper figure.egg-f-row.f figcaption {
     top: 63%;
-    left: 16px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.f [rel=img] {
     left: -3px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.s figcaption {
     top: 63%;
-    left: 26px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.s [rel=img] {
     left: -11px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.t figcaption {
-    left: 18px;
     top: 60%;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.t [rel=img] {
@@ -979,7 +966,6 @@ p {
   }
   #slide_pmarketing .wrapper figure.egg-f-row.fo figcaption {
     top: 63%;
-    left: 27px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.fo [rel=img] {
     left: 0;
@@ -987,22 +973,14 @@ p {
   #slide_pmarketing .wrapper figure.egg-s-row figcaption {
     top: 65%;
   }
-  #slide_pmarketing .wrapper figure.egg-s-row.f figcaption {
-    left: 16px;
-  }
-  #slide_pmarketing .wrapper figure.egg-s-row.s figcaption {
-    left: 8px;
-  }
   #slide_pmarketing .wrapper figure.egg-s-row.s [rel=img] {
     left: -2px;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.t figcaption {
-    left: 58px;
     top: 68%;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.fo figcaption {
     top: 62%;
-    left: 25px;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.fo [rel=img] {
     left: -11px;
@@ -1041,21 +1019,18 @@ p {
   }
   #slide_pmarketing .wrapper figure.egg-f-row.f figcaption {
     top: 63%;
-    left: 11px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.f [rel=img] {
     left: -3px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.s figcaption {
     top: 63%;
-    left: 18px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.s [rel=img] {
     left: -8px;
     width: 110%;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.t figcaption {
-    left: 17px;
     top: 60%;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.t [rel=img] {
@@ -1064,7 +1039,6 @@ p {
   }
   #slide_pmarketing .wrapper figure.egg-f-row.fo figcaption {
     top: 63%;
-    left: 21px;
   }
   #slide_pmarketing .wrapper figure.egg-f-row.fo [rel=img] {
     left: 0;
@@ -1076,11 +1050,7 @@ p {
   #slide_pmarketing .wrapper figure.egg-s-row figcaption {
     top: 65%;
   }
-  #slide_pmarketing .wrapper figure.egg-s-row.f figcaption {
-    left: 12px;
-  }
   #slide_pmarketing .wrapper figure.egg-s-row.s figcaption {
-    left: 9px;
     font-size: 0.9em;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.s [rel=img] {
@@ -1088,12 +1058,10 @@ p {
     width: 106%;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.t figcaption {
-    left: 43px;
     top: 68%;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.fo figcaption {
     top: 62%;
-    left: 18px;
   }
   #slide_pmarketing .wrapper figure.egg-s-row.fo [rel=img] {
     left: -9px;
