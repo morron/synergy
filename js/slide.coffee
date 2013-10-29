@@ -12,6 +12,9 @@ jQuery ->
   .add($('#slide_pmarketing'))
   .add($('#slide_geography'))
 
+  parallax.width = $(window).width();
+  parallax.height = $(window).height();
+
   parallax.background = $("body")
 
   $('.slide-link, .button').on 'click', ->

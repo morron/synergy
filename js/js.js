@@ -3,15 +3,19 @@ void function () {
   var OnResizeCalled;
   OnResizeCalled = function () {
     var wHeight, wWidth;
-    wHeight = window.innerHeight;
-    wWidth = innerHeight / 3 * 4;
+    wHeight = $(window).height();
+    wWidth = wHeight / 3 * 4;
     return $('.slide article').css({
       width: wWidth,
       height: wHeight,
       marginLeft: wWidth / 2 * -1
     });
   };
-  window.addEventListener('resize', OnResizeCalled, false);
+  if (!window.addEventListener) {
+    window.attachEvent('onresize', OnResizeCalled);
+  } else {
+    window.addEventListener('resize', OnResizeCalled, false);
+  }
   jQuery(function () {
     OnResizeCalled();
     $('#splashImg').splashScreen({
@@ -28,10 +32,11 @@ void function () {
       $(this).find('figcaption').hide();
       return e.preventDefault();
     });
-    return $('#slide_pmarketing figure').on('mouseout', function (e) {
+    $('#slide_pmarketing figure').on('mouseout', function (e) {
       $(this).find('[rel=img]').fadeTo('fast', 0);
       $(this).find('figcaption').show();
       return e.preventDefault();
     });
+    return OnResizeCalled();
   });
 }.call(this);

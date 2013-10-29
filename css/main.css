@@ -251,6 +251,9 @@ p {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 }
 /******************************
  SLIDE CONTACTS
@@ -327,6 +330,9 @@ p {
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 /******************************
  SLIDE AGENCY
@@ -414,6 +420,9 @@ p {
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 #slide_mission {
   background-color: #b4b6b7;
@@ -427,6 +436,9 @@ p {
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
 #slide_mission .wrapper {
   background-color: #ffffff;
@@ -566,6 +578,9 @@ p {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 /******************************
  SLIDE DEVELOPMENT
@@ -611,6 +626,9 @@ p {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 /******************************
  SLIDE MARKETING
@@ -664,6 +682,9 @@ p {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 /******************************
  SLIDE P-MARKETING
@@ -798,6 +819,9 @@ p {
   -ms-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  /* Internet Explorer */
+
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 @media all {
   .slide article {

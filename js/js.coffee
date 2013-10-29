@@ -1,13 +1,16 @@
 OnResizeCalled = () ->
-  wHeight = window.innerHeight;
-  wWidth = innerHeight/3*4;
+  wHeight = $(window).height();
+  wWidth = wHeight/3*4;
   $('.slide article').css(
     width: wWidth
     height: wHeight
     marginLeft: (wWidth/2)*(-1)
   )
 
-window.addEventListener("resize", OnResizeCalled, false)
+if !window.addEventListener
+  window.attachEvent 'onresize', OnResizeCalled
+else
+  window.addEventListener "resize", OnResizeCalled, false
 
 jQuery ->
   OnResizeCalled();
@@ -32,7 +35,7 @@ jQuery ->
     $(this).find('figcaption').show()
     e.preventDefault()
 
-
+  OnResizeCalled()
   ###$('#slide_worth .slide-link span').on 'click', ->
     $(this).after('<p rel="hover">'+$(this).data('hover')+'</p>')
     $(this).hide()
