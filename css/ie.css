@@ -1,0 +1,4 @@
+#slide_index .content {
+  background: url(../img/index-triangle.png) no-repeat center center transparent;
+  background-size: cover;
+}
