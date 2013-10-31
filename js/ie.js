@@ -15,9 +15,41 @@ jQuery(function () {
   }, function () {
     return $(this).parents('.content').css('background-image', 'url(img/index-triangle.png)');
   });
-  return $('#slide_index .slide-link.fo').hover(function () {
+  $('#slide_index .slide-link.fo').hover(function () {
     return $(this).parents('.content').css('background-image', 'url(img/index-triangle-fo.png)');
   }, function () {
     return $(this).parents('.content').css('background-image', 'url(img/index-triangle.png)');
+  });
+  $('#slide_worth .slide-link.f').hover(function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle-f.png)');
+  }, function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle.png)');
+  });
+  $('#slide_worth .slide-link.t').hover(function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle-t.png)');
+  }, function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle.png)');
+  });
+  $('#slide_worth .slide-link.t').hover(function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle-t.png)');
+  }, function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle.png)');
+  });
+  $('#slide_worth .slide-link.th').hover(function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle-th.png)');
+  }, function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle.png)');
+  });
+  $('#slide_worth .slide-link.fo').hover(function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle-fo.png)');
+  }, function () {
+    return $(this).parents('.iec').css('background-image', 'url(img/clock-triangle.png)');
+  });
+  return $('#slide_worth .slide-link').hover(function () {
+    $(this).find('span').hide();
+    return $(this).find('p[rel=hover]').show();
+  }, function () {
+    $(this).find('span').show();
+    return $(this).find('p[rel=hover]').hide();
   });
 });
